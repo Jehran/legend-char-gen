@@ -1,0 +1,12 @@
+{ 
+	'hp': 8,
+	'skills': 6,
+	'kom': ['Int', 'Cha', 'Wis'],
+	'kdm': ['Str', 'Dex', 'Con'],
+	'ab': 'Low',
+	'highSaves': ['Any', 'Any'],
+	'lowSave': 'Any',
+	'fastTrack': ['Arcane Secrets'],
+	'mediumTrack': ['Just Blade', 'Arcane Lore'],
+	'slowTrack': ['Force of Will']
+}

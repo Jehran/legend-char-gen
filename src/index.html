@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>Legend Character Generator</title>
+		<link rel="stylesheet" type="text/css" href="/Scripts/dijit/themes/claro/claro.css" />
+		<script type="text/javascript" src="/Scripts/dojo/dojo.js">
+		</script>
+	</head>
+	<body>
+		<div id='charBuilder' data-dojo-type='legend/CharacterBuilder'>
+		<script type='text/javascript'>
+			require(['dojo/parser','legend/CharacterBuilder'], 
+				function (parser, CharacterBuilder) {
+					parser.parse();
+			});
+		</script>
+	</body>
+</html>

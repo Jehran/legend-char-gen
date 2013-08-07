@@ -1,0 +1,12 @@
+{ 
+	'hp': 8,
+	'skills': 6,
+	'kom': 'Varies',
+	'kdm': 'Varies',
+	'ab': 'High',
+	'highSaves': ['Ref', 'Any'],
+	'lowSave': 'Any',
+	'fastTrack': ['Esoterica Radica'],
+	'mediumTrack': ['Assassin', 'Swashbuckler', 'Demo Man'],
+	'slowTrack': ['Acrobatic Adept', 'I Am Ten Ninjas', 'Fortunes Friend']
+}

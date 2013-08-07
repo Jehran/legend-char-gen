@@ -1,0 +1,12 @@
+{ 
+	'hp': 10,
+	'skills': 6,
+	'kom': 'Dex',
+	'kdm': 'Int',
+	'ab': 'High',
+	'highSaves': ['Fort', 'Ref'],
+	'lowSave': 'Will',
+	'fastTrack': ['Battles Tempering'],
+	'mediumTrack': ['Professional Soldier'],
+	'slowTrack': ['A Reign of Arrows', 'Iron Magi']
+}

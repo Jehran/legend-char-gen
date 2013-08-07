@@ -1,0 +1,10 @@
+{
+	'abilities': { 'Dex': 2 },
+	'size': 'Small',
+	'type': 'Humanoid',
+	'bonuses': { 
+		'saveBonus': 'Will',
+		'speed': '30'
+	},
+	'bonusFeats': 'Any'
+}

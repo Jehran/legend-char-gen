@@ -1,0 +1,12 @@
+{ 
+	'hp': 8,
+	'skills': 6,
+	'kom': 'Wis',
+	'kdm': 'Cha',
+	'ab': 'Low',
+	'highSaves': ['Fort', 'Will'],
+	'lowSave': 'Ref',
+	'fastTrack': ['Spellcasting'],
+	'mediumTrack': ['Incantation'],
+	'slowTrack': 'Any'
+}

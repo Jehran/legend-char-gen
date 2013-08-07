@@ -1,0 +1,12 @@
+{ 
+	'hp': 10,
+	'skills': 5,
+	'kom': 'Varies',
+	'kdm': 'Con',
+	'ab': 'High',
+	'highSaves': ['Fort', 'Will'],
+	'lowSave': 'Ref',
+	'fastTrack': ['Path of the Ancestors'],
+	'mediumTrack': ['Rage', 'Dervish'],
+	'slowTrack': ['Path of Destruction']
+}

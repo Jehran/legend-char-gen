@@ -1,0 +1,10 @@
+{
+	'abilities': { 'Any': 2 },
+	'size': 'Average',
+	'type': 'Humanoid',
+	'bonuses': { 
+		'skillBonus': 'Any',
+		'raceBonus': [ 'Attack', 'AC', 'Will', 'Reflex', 'Fortitude']
+	},
+	'bonusFeats': 'Any'
+}

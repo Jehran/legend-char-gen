@@ -1,0 +1,12 @@
+{ 
+	'hp': 8,
+	'skills': 6,
+	'kom': 'Wis',
+	'kdm': 'Con',
+	'ab': 'High',
+	'highSaves': ['Any', 'Any'],
+	'lowSave': 'Any',
+	'fastTrack': ['Discipline of the Dragon'],
+	'mediumTrack': ['Discipline of the Serpent'],
+	'slowTrack': ['Discipline of the Crane']
+}
