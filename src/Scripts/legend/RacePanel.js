@@ -34,7 +34,7 @@ define([
                 this._setupAbilityBox(this.abilityBonus2, r.abiltyBonuses[1], true);
                 this._setupAbilityBox(this.abilityPenalty, r.abilityPenalty, false);
                 this.size.innerHTML = string.substitute("[${0}] size", [r.size]);
-                this.type.innerHTML = string.substitute("[${0}] tye", [r.type]);
+                this.type.innerHTML = string.substitute("[${0}] type", [r.type]);
                 this._setupBonusBox(this.raceBonus1, r.bonuses[0]);
                 this._setupBonusBox(this.raceBonus2, r.bonuses[1]);
                 this._setupFeatBox(r.bonusFeats);
@@ -50,9 +50,9 @@ define([
                         select += string.substitute("<option value='${0}'>${0}</option>", [data[i]]);
                     }
                     select += "</select>";
-                    td.innerHTML = string.substitute("${0}2 ${1}", [isBonus ? "+" : "-", select]);
+                    td.innerHTML = string.substitute("${0}2<br/>${1}", [isBonus ? "+" : "-", select]);
                 } else {
-                    td.innerHTML = string.substitute("${0}2 ${1}", [isBonus ? "+" : "-", data]);
+                    td.innerHTML = string.substitute("${0}2<br/>${1}", [isBonus ? "+" : "-", data]);
                 }
             },
             _setupBonusBox: function (td, data) {
@@ -80,7 +80,10 @@ define([
                 }
             },
             _setupFeatBox: function (data) {
-                this.bonusFeats.innerHTML = data.join("<br/>");
+                if (Array.isArray(data))
+                    this.bonusFeats.innerHTML = data.join("<br/>");
+                else
+                    this.bonusFeats.innerHTML = data;
             }
         });
 })

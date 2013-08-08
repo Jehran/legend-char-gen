@@ -1,0 +1,45 @@
+﻿table.raceInfo {
+    border-collapse: collapse;
+}
+table.raceInfo td {
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+table.raceInfo td.abilityBonus:empty, table.raceInfo td.abilityPenalty:empty {
+    min-width: 0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(64,173,72);
+}
+
+table.raceInfo td.abilityBonus {
+    background-color: rgb(64,173,72);
+    min-width:55px;
+    padding: 0px;
+}
+
+table.raceInfo td.abilityPenalty {
+    background-color: rgb(169,28,31);
+    min-width:55px;
+    padding: 0px;
+}
+
+table.raceInfo td.halfWidthCell {
+    width: 165px;
+    padding: 0px;
+}
+
+table.raceInfo td.raceBonus1 {
+    border-top: rgb(60,60,60) solid 1px;
+}
+
+table.raceInfo td.raceBonus2 {
+    border-bottom: rgb(60,60,60) solid 1px;
+}
+
+table.raceInfo tr.feats td{
+    background-color: rgb(51,51,51);
+}

@@ -1,24 +1,25 @@
 <div>
     <div data-dojo-attach-point="selectRace" data-dojo-type="dijit/form/Select" data-dojo-props="labelAttr:'name', sortByLabel: false" data-dojo-attach-event="onChange:_onRaceChange"></div>
-    <table>
+    <br /><br />
+    <table class="raceInfo">
         <tr>
             <td data-dojo-attach-point="abilityBonus1" class="abilityBonus"    rowspan="2" ></td>
             <td data-dojo-attach-point="abilityBonus2" class="abilityBonus"    rowspan="2" ></td>
             <td data-dojo-attach-point="abilityPenalty" class="abilityPenalty" rowspan="2" ></td>
-            <td data-dojo-attach-point="size"></td>
+            <td data-dojo-attach-point="size" class="halfWidthCell"></td>
         </tr>
         <tr>
             <td data-dojo-attach-point="type"></td>
         </tr>
         <tr>
-            <td data-dojo-attach-point="raceBonus1" colspan="4"></td>
+            <td data-dojo-attach-point="raceBonus1" class="raceBonus1" colspan="4"></td>
         </tr>
         <tr>
-            <td data-dojo-attach-point="raceBonus2" colspan="4"></td>
+            <td data-dojo-attach-point="raceBonus2" class="raceBonus2" colspan="4"></td>
         </tr>
-        <tr>
-            <td colspan="2">BONUS FEATS<br />(choose one)</td>
-            <td data-dojo-attach-point="bonusFeats" colspan="2"></td>
+        <tr class="feats">
+            <td colspan="3" class="halfWidthCell">BONUS FEATS<br />(choose one)</td>
+            <td data-dojo-attach-point="bonusFeats"></td>
         </tr>
     </table>
 </div>
