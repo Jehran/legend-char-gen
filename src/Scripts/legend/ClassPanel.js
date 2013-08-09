@@ -7,6 +7,7 @@ define([
     "./data/classService",
     "dojo/string",
     "./data/advancementService",
+    "./data/currentCharacter",
     "dijit/form/Select"
 ], function (
 	declare,
@@ -17,6 +18,7 @@ define([
     classService,
     string,
     advancementService,
+    currentCharacter,
     Select) {
     return declare('legend.ClassPanel', [ContentPane, _TemplatedMixin, _WidgetsInTemplateMixin],
         {
@@ -28,14 +30,21 @@ define([
                 this.classStore = classService.getStore();
                 this.selectClass.setStore(this.classStore);
                 this._onClassChange(this.selectClass.getValue());
+                var this$ = this;
+                currentCharacter.watch("selectedRace", function () {
+                    this$._onClassChange(currentCharacter.selectedClass.id);
+                });
             },
             _onClassChange: function (value) {
-                this.selectedClass = this.classStore.get(value);
-                var c = this.selectedClass;
+                currentCharacter.set("selectedClass", this.classStore.get(value));
+                var c = currentCharacter.selectedClass;
                 this.hitPoints.innerHTML = c.hp;
                 this.skills.innerHTML = c.skills;
                 this._setupKAM(this.kom, c.kom);
                 this._setupKAM(this.kdm, c.kdm);
+                this._setupTrackSelection(this.fastTrack, c.fastTrack);
+                this._setupTrackSelection(this.mediumTrack, c.mediumTrack);
+                this._setupTrackSelection(this.slowTrack, c.slowTrack);
                 this._setupAdvancementTable(c);
             },
             _setupKAM: function (td, data) {
@@ -50,6 +59,17 @@ define([
                 else {
                     td.innerHTML = data;
                 }
+            },
+            _setupTrackSelection: function (td, data, multiClass) {
+                var select = "<select>";
+                for (var i = 0; i < data.length; i++) {
+                    select += string.substitute("<option value='${0}'>${0}</option>", [data[i]]);
+                }
+                if (currentCharacter.selectedRace.racialTrack) {
+                    select += string.substitute("<option value='${0}'>${0}</option>", [currentCharacter.selectedRace.name]);
+                }
+                select += "</select>";
+                td.innerHTML = select;
             },
             _setupAdvancementTable: function (c) {
                 var table = string.substitute("<tr><th>Level</th><th>BAB</th><th>${0}</th><th>${1}</th><th>${2}</th></tr>",

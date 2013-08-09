@@ -6,6 +6,7 @@ define([
 	'dojo/text!./templates/RacePanel.html',
     "./data/raceService",
     "dojo/string",
+    "./data/currentCharacter",
     "dijit/form/Select"
 ], function (
 	declare,
@@ -15,12 +16,12 @@ define([
 	template,
     raceService,
     string,
+    currentCharacter,
     Select) {
     return declare('legend.RacePanel', [ContentPane, _TemplatedMixin, _WidgetsInTemplateMixin],
         {
             raceStore: undefined,
             templateString: template,
-            selectedRace: undefined,
             postCreate: function () {
                 this.inherited(arguments);
                 this.raceStore = raceService.getStore();
@@ -28,8 +29,8 @@ define([
                 this._onRaceChange(this.selectRace.getValue());
             },
             _onRaceChange: function (value) {
-                this.selectedRace = this.raceStore.get(value);
-                var r = this.selectedRace;
+                currentCharacter.set("selectedRace", this.raceStore.get(value));
+                var r = currentCharacter.selectedRace;
                 this._setupAbilityBox(this.abilityBonus1, r.abiltyBonuses[0], true);
                 this._setupAbilityBox(this.abilityBonus2, r.abiltyBonuses[1], true);
                 this._setupAbilityBox(this.abilityPenalty, r.abilityPenalty, false);
