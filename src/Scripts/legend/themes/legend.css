@@ -1,6 +1,7 @@
-﻿table.raceInfo {
-    border-collapse: collapse;
+﻿table {
+    border-collapse: collapse
 }
+
 table.raceInfo td {
     text-align: center;
     background-color: black;
@@ -47,7 +48,6 @@ table.raceInfo tr.feats td{
 table.classInfo {
     background: rgb(60,60,60);
     width: 200px;
-    border-collapse: collapse;
     color: white;
 }
 
@@ -56,4 +56,24 @@ table.classInfo td {
     padding: 0px;
     border: 0px;
     text-align: center;
+}
+
+table.advancement th {
+    color: rgb(168, 29, 31);
+    text-align: center;
+    padding: 5px;
+}
+
+table.advancement td {
+    border-right: rgb(168, 29, 31) 1px solid;
+    border-bottom: rgb(168, 29, 31) 1px solid;
+    text-align: center;
+}
+
+table.advancement td:last-child {
+    border-right: none;
+}
+
+table.advancement tr:last-child td {
+    border-bottom: none;
 }
