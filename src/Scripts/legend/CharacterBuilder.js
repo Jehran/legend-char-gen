@@ -5,7 +5,9 @@ define([
 	'dijit/_WidgetsInTemplateMixin',
 	'dojo/text!./templates/CharacterBuilder.html',
     "dijit/layout/TabContainer",
-    "./RacePanel"
+    "./RacePanel",
+    "./ClassPanel",
+    "./AttributePanel",
 ], function (
 	declare,
 	_WidgetBase,

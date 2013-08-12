@@ -77,3 +77,15 @@ table.advancement td:last-child {
 table.advancement tr:last-child td {
     border-bottom: none;
 }
+
+table.attributeSelector .dijitSpinner {
+    width: 45px;
+}
+
+table.attributeSelector tr.kom td {
+    background: grey;
+}
+
+table.attributeSelector tr.kdm td {
+    background: blue;
+}

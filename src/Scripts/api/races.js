@@ -2,7 +2,7 @@
 	{
 	    "id": "dwarf", 
 	    "name": "Dwarf",
-	    "abiltyBonuses": ["Con", "Int"],
+	    "abilityBonuses": ["Con", "Int"],
         "abilityPenalty": "Cha",
 	    "size": "Average",
 	    "type": "Humanoid",
@@ -19,7 +19,7 @@
 	{
 	    "id": "elf", 
 	    "name": "Elf",
-	    "abiltyBonuses": [ "Dex", ["Int", "Wis", "Cha"]],
+	    "abilityBonuses": [ "Dex", ["Int", "Wis", "Cha"]],
         "abilityPenalty": "Con",
 	    "size": "Average",
 	    "type": "Humanoid",
@@ -36,7 +36,7 @@
 	{
 	    "id": "gnome", 
 	    "name": "Gnome",
-	    "abiltyBonuses": ["Con", "Cha"],
+	    "abilityBonuses": ["Con", "Cha"],
 	    "abilityPenalty": "Str",
 	    "size": "Small",
 	    "type": "Humanoid",
@@ -53,7 +53,7 @@
 	{
 	    "id": "halfling", 
 	    "name": "Halfling",
-	    "abiltyBonuses": ["Dex", ""],
+	    "abilityBonuses": ["Dex", ""],
 	    "abilityPenalty": "",
 	    "size": "Small",
 	    "type": "Humanoid",
@@ -66,7 +66,7 @@
 	{
 	    "id": "human", 
 	    "name": "Human",
-	    "abiltyBonuses": [["Str", "Con", "Dex", "Wis", "Int", "Cha"], ""],
+	    "abilityBonuses": [["Str", "Con", "Dex", "Wis", "Int", "Cha"], ""],
 	    "abilityPenalty": "",
 	    "size": "Average",
 	    "type": "Humanoid",
@@ -79,7 +79,7 @@
 	{
 	    "id": "orc", 
 	    "name": "Orc",
-	    "abiltyBonuses": ["Con", "Str"],
+	    "abilityBonuses": ["Con", "Str"],
 	    "abilityPenalty": "Cha",
 	    "size": "Average",
 	    "type": "Humanoid",
@@ -96,7 +96,7 @@
 	{
 	    "id": "celestial", 
 	    "name": "Celestial",
-	    "abiltyBonuses": ["Wis", ""],
+	    "abilityBonuses": ["Wis", ""],
 	    "abilityPenalty": "",
 	    "size": "Average",
 	    "type": "Outsider",

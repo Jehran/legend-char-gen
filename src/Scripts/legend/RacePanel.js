@@ -31,8 +31,8 @@ define([
             _onRaceChange: function (value) {
                 currentCharacter.set("selectedRace", this.raceStore.get(value));
                 var r = currentCharacter.selectedRace;
-                this._setupAbilityBox(this.abilityBonus1, r.abiltyBonuses[0], true);
-                this._setupAbilityBox(this.abilityBonus2, r.abiltyBonuses[1], true);
+                this._setupAbilityBox(this.abilityBonus1, r.abilityBonuses[0], true);
+                this._setupAbilityBox(this.abilityBonus2, r.abilityBonuses[1], true);
                 this._setupAbilityBox(this.abilityPenalty, r.abilityPenalty, false);
                 this.size.innerHTML = string.substitute("[${0}] size", [r.size]);
                 this.type.innerHTML = string.substitute("[${0}] type", [r.type]);

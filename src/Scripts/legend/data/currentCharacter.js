@@ -9,13 +9,14 @@
         },
         _raceAbilityOverrides: {},
         _raceBonusOverrides: [],
-        _getRaceMod: function (attribute) {
+        getRaceMod: function (attribute) {
             if (this._raceAbilityOverrides[attribute])
                 return this._raceAbilityOverrides[attribute];
-            if (this.selectedRace.abilityBonuses.contains(attribute))
+            if (this.selectedRace.abilityBonuses.indexOf(attribute) >= 0)
                 return 2;
-            if (this.selectedRace.abilityPenalty.contains(attribute))
+            if (this.selectedRace.abilityPenalty.indexOf(attribute) >= 0)
                 return -2;
+            return 0;
         },
         //Class .
         selectedClass: undefined,
@@ -28,14 +29,14 @@
         _komClassOverride: undefined,
         _kdmClassOverride: undefined,
         _savesOverride: {},
-        _getKOM: function () {
+        getKOM: function () {
             if (this.selectedRace.racialTrack)
                 return this.selectedRace.racialTrack.kom;
             if (this._komClassOverride)
                 return this._komClassOverride;
             return this.selectedClass.kom;
         },
-        _getKDM: function () {
+        getKDM: function () {
             if (this.selectedRace.racialTrack)
                 return this.selectedRace.racialTrack.kdm;
             if (this._kdmClassOverride)
@@ -48,7 +49,7 @@
         fullBuyInTrack: undefined,
         //Character Sheet Info
         _getAttribute: function (attribute) {
-            return this[attribute] + this._getRaceMod(attribute)
+            return this[attribute] + this.getRaceMod(attribute)
         },
         Str: 8,
         _StrGetter: function () {
