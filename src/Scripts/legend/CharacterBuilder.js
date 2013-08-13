@@ -8,6 +8,7 @@ define([
     "./RacePanel",
     "./ClassPanel",
     "./AttributePanel",
+    "./TrackPanel"
 ], function (
 	declare,
 	_WidgetBase,
@@ -15,7 +16,10 @@ define([
 	_WidgetsInTemplateMixin,
 	template,
     TabContainer,
-    RacePanel) {
+    RacePanel,
+    ClassPanel,
+    AttributePanel,
+    TrackPanel) {
     return declare('legend.CharacterBuilder', [_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin],
         {
             templateString: template
