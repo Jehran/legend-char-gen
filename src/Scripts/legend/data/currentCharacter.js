@@ -27,9 +27,13 @@
             this._savesOverride = {};
         },
         _komClassOverride: undefined,
+        _komTrackOverride: undefined,
         _kdmClassOverride: undefined,
+        _kdmTrackOverride: undefined,
         _savesOverride: {},
         getKOM: function () {
+            if (this._komTrackOverride)
+                return this._komTrackOverride;
             if (this.selectedRace.racialTrack)
                 return this.selectedRace.racialTrack.kom;
             if (this._komClassOverride)
@@ -37,15 +41,41 @@
             return this.selectedClass.kom;
         },
         getKDM: function () {
+            if (this._kdmTrackOverride)
+                return this._kdmTrackOverride;
             if (this.selectedRace.racialTrack)
                 return this.selectedRace.racialTrack.kdm;
             if (this._kdmClassOverride)
                 return this._kdmClassOverride;
             return this.selectedClass.kdm;
         },
+        _checkTrack: function (oldValue, newValue) {
+            if (oldValue) {
+                if (oldValue.komOverride)
+                    this._komTrackOverride = undefined;
+                if (oldValue.kdmOverride)
+                    this._kdmTrackOverride = undefined;
+            }
+            if (newValue.komOverride)
+                this._komTrackOverride = newValue.komOverride;
+            if (newValue.kdmOverride)
+                this._kdmTrackOverride = newValue.kdmOverride;
+        },
         slowTrack: undefined,
+        _slowTrackSetter: function (track) {
+            this._checkTrack(this.slowTrack, track);
+            this.slowTrack = track;
+        },
         mediumTrack: undefined,
+        _mediumTrackSetter: function (track) {
+            this._checkTrack(this.mediumTrack, track);
+            this.mediumTrack = track;
+        },
         fastTrack: undefined,
+        _fastTrackSetter: function (track) {
+            this._checkTrack(this.fastTrack, track);
+            this.fastTrack = track;
+        },
         fullBuyInTrack: undefined,
         //Character Sheet Info
         _getAttribute: function (attribute) {

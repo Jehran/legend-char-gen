@@ -45,7 +45,7 @@
     },
     {
         "id": "pathOfDestruction",
-        "name": "Path Of Destruction",
+        "name": "Path of Destruction",
         "type": "barbarian",
         "circles": [
             { "name": "Cleave", "text": "Once per [Round], as a swift action, when you hit an opponent with a melee attack and deal damage to that opponent with that attack, you may compare your attack roll from that attack to the AC of another target opponent within [Melee] range. If the attack roll equals or exceeds that opponent’s AC, you deal that much damage to that opponent." },
@@ -54,7 +54,7 @@
             { "name": "Terrifying Presence", "text": "At the beginning of your turn, opponents within your [Melee] range must make a Will save (DC 10 + ½ your level + your Charisma modifier) every [Round] or become [Shaken]. This application of the [Shaken] condition doesn’t stack with itself, but stacks normally with other [Fear] effects. This is a [Mindaffecting] [Fear] effect." },
             { "name": "Path of Blades", "text": "When you use the Charge maneuver, you can make a single additional attack with the [Volley] descriptor as you make the Charge; this attack with the [Volley] descriptor is applied to all opponents within [Melee] range of squares you move into as part of the Charge. This attack deals damage equal to three times your KOM." },
             { "name": "Greater Cleave", "text": "Activating Cleave no longer requires a swift action, and it can be used any number of times per [Round]." },
-            { "name": "Deadly Presence", "text": "When an opponent begins their turn within your [Melee] range, it takes damage equal to your level + your Key Offensive Modifier and is [Battered] for one [Round]. This ability can be turned on or off as a swift action." },
+            { "name": "Deadly Presence", "text": "When an opponent begins their turn within your [Melee] range, it takes damage equal to your level + your Key Offensive Modifier and is [Battered] for one [Round]. This ability can be turned on or off as a swift action." }
         ]
     },
     {

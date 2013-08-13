@@ -20,9 +20,9 @@
         </tr>
     </table>
     <table class="trackSelection">
-        <tr><th>Fast Track:</th><td data-dojo-attach-point="fastTrack"></td></tr>
-        <tr><th>Medium Track:</th><td data-dojo-attach-point="mediumTrack"></td></tr>
-        <tr><th>Slow Track:</th><td data-dojo-attach-point="slowTrack"></td></tr>
+        <tr><th>Fast Track:</th><td><div data-dojo-type="dijit.form.Select" data-dojo-props="labelAttr:'name', sortByLabel: false, speed: 'fastTrack'" data-ddojo-attach-event="onChange:_onTrackChange" data-dojo-attach-point="fastTrack"></div></td></tr>
+        <tr><th>Medium Track:</th><td><div data-dojo-type="dijit.form.Select" data-dojo-props="labelAttr:'name', sortByLabel: false, speed: 'mediumTrack'" data-ddojo-attach-event="onChange:_onTrackChange" data-dojo-attach-point="mediumTrack"></div></td></tr>
+        <tr><th>Slow Track:</th><td><div data-dojo-type="dijit.form.Select" data-dojo-props="labelAttr:'name', sortByLabel: false, speed: 'slowTrack'" data-ddojo-attach-event="onChange:_onTrackChange" data-dojo-attach-point="slowTrack"></div></td></tr>
         <!--<tr><th>Full By In:</th><th data-dojo-attach-point="fullBuyIn"></th></tr>-->
     </table>
     <table data-dojo-attach-point="advancement" class="advancement">

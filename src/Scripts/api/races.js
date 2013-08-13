@@ -253,8 +253,8 @@
 	    "size": "Average",
 	    "type": "Undead",
 	    "bonuses": [
-	        [ "extraVision", "[Ghostwise sight] 45 ft" ]
-	        [ "skillBonus", "Arcana" ],
+	        [ "extraVision", "[Ghostwise sight] 45 ft" ],
+	        [ "skillBonus", "Arcana" ]
 	    ],
 	    "bonusFeats": [
 		    "Lich's Wrath",
@@ -315,7 +315,7 @@
 	        "hp": 10,
 	        "skills": 5,
 	        "kom": "Str",
-	        "kdm": ["Dex", "Int"]
+	        "kdm": ["Dex", "Int"],
 	        "bab": "High",
 	        "highSaves": ["Fort", "Will"],
 	        "lowSave": "Ref"
@@ -329,7 +329,7 @@
 	    "size": "Average",
 	    "type": "Undead",
 	    "bonuses": [
-	        [ "skillBonus", "Arcana" ],
+	        [ "skillBonus", "Arcana" ]
 	    ],
 	    "bonusFeats": [
 		    "Blood Thirst",

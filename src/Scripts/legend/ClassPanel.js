@@ -6,9 +6,13 @@ define([
 	'dojo/text!./templates/ClassPanel.html',
     "./data/classService",
     "dojo/string",
+    "dojo/_base/lang",
+    "dojo/dom-construct",
     "./data/advancementService",
     "./data/currentCharacter",
-    "dijit/form/Select"
+    "./data/trackService",
+    "dijit/form/Select",
+    "dojo/store/Memory",
 ], function (
 	declare,
 	ContentPane,
@@ -17,9 +21,13 @@ define([
 	template,
     classService,
     string,
+    lang,
+    domConstruct,
     advancementService,
     currentCharacter,
-    Select) {
+    trackService,
+    Select,
+    Memory) {
     return declare('legend.ClassPanel', [ContentPane, _TemplatedMixin, _WidgetsInTemplateMixin],
         {
             classStore: undefined,
@@ -34,6 +42,9 @@ define([
                 currentCharacter.watch("selectedRace", function () {
                     this$._onClassChange(currentCharacter.selectedClass.id);
                 });
+                this.fastTrack.on("change", this._onTrackChange);
+                this.mediumTrack.on("change", this._onTrackChange);
+                this.slowTrack.on("change", this._onTrackChange);
             },
             _onClassChange: function (value) {
                 currentCharacter.set("selectedClass", this.classStore.get(value));
@@ -60,16 +71,21 @@ define([
                     td.innerHTML = data;
                 }
             },
-            _setupTrackSelection: function (td, data, multiClass) {
-                var select = "<select>";
+            _setupTrackSelection: function (select, data, multiClass) {
+                var options = [];
+                //var select = "<select>";
                 for (var i = 0; i < data.length; i++) {
-                    select += string.substitute("<option value='${0}'>${0}</option>", [data[i]]);
+                    options.push({ name: data[i], id: data[i] });
+                    //select += string.substitute("<option value='${0}'>${0}</option>", [data[i]]);
                 }
                 if (currentCharacter.selectedRace.racialTrack) {
-                    select += string.substitute("<option value='${0}'>${0}</option>", [currentCharacter.selectedRace.name]);
+                    options.push({ name: currentCharacter.selectedRace.name, id: currentCharacter.selectedRace.name });
+                    //select += string.substitute("<option value='${0}'>${0}</option>", [currentCharacter.selectedRace.name]);
                 }
-                select += "</select>";
-                td.innerHTML = select;
+                //select += "</select>";
+                var store = new Memory({ data: options });
+                select.setStore(store);
+                lang.hitch(select, this._onTrackChange)();
             },
             _setupAdvancementTable: function (c) {
                 var table = string.substitute("<tr><th>Level</th><th>BAB</th><th>${0}</th><th>${1}</th><th>${2}</th></tr>",
@@ -79,6 +95,9 @@ define([
                         [i, advancementService.getAb(c.ab, i), advancementService.getSave("Good", i), advancementService.getSave("Poor", i)]);
                 }
                 this.advancement.innerHTML = table;
+            },
+            _onTrackChange: function () {
+                currentCharacter.set(this.speed, trackService.getTrack(this.getValue()));
             }
         });
 })
