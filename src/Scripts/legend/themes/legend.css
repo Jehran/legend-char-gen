@@ -1,95 +1,89 @@
 ﻿table {
-    border-collapse: collapse
+  border-collapse: collapse;
 }
-
 table.raceInfo td {
-    text-align: center;
-    background-color: black;
-    color: white;
-    border: none;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: none;
 }
-
-table.raceInfo td.abilityBonus:empty, table.raceInfo td.abilityPenalty:empty {
-    min-width: 0px;
-    padding: 0px;
-    margin: 0px;
-    background-color: rgb(64,173,72);
+table.raceInfo td.abilityBonus:empty,
+table.raceInfo td.abilityPenalty:empty {
+  min-width: 0px;
+  padding: 0px;
+  margin: 0px;
+  background-color: #40ad48;
 }
-
 table.raceInfo td.abilityBonus {
-    background-color: rgb(64,173,72);
-    min-width:55px;
-    padding: 0px;
+  background-color: #40ad48;
+  min-width: 55px;
+  padding: 0px;
 }
-
 table.raceInfo td.abilityPenalty {
-    background-color: rgb(169,28,31);
-    min-width:55px;
-    padding: 0px;
+  background-color: #a91c1f;
+  min-width: 55px;
+  padding: 0px;
 }
-
 table.raceInfo td.halfWidthCell {
-    width: 165px;
-    padding: 0px;
+  width: 165px;
+  padding: 0px;
 }
-
 table.raceInfo td.raceBonus1 {
-    border-top: rgb(60,60,60) solid 1px;
+  border-top: #3c3c3c solid 1px;
 }
-
 table.raceInfo td.raceBonus2 {
-    border-bottom: rgb(60,60,60) solid 1px;
+  border-bottom: #3c3c3c solid 1px;
 }
-
-table.raceInfo tr.feats td{
-    background-color: rgb(51,51,51);
+table.raceInfo tr.feats td {
+  background-color: #333333;
 }
-
 table.classInfo {
-    background: rgb(60,60,60);
-    width: 200px;
-    color: white;
+  background: #3c3c3c;
+  width: 200px;
+  color: white;
 }
-
 table.classInfo td {
-    width: 50%;
-    padding: 0px;
-    border: 0px;
-    text-align: center;
+  width: 50%;
+  padding: 0px;
+  border: 0px;
+  text-align: center;
 }
-
 table.advancement th {
-    color: rgb(168, 29, 31);
-    text-align: center;
-    padding: 5px;
+  color: #a81d1f;
+  text-align: center;
+  padding: 5px;
 }
-
 table.advancement td {
-    border-right: rgb(168, 29, 31) 1px solid;
-    border-bottom: rgb(168, 29, 31) 1px solid;
-    text-align: center;
+  border-right: #a81d1f 1px solid;
+  border-bottom: #a81d1f 1px solid;
+  text-align: center;
 }
-
 table.advancement td:last-child {
-    border-right: none;
+  border-right: none;
 }
-
 table.advancement.fullBuyInDisabled td:nth-last-child(-n+2) {
-    border-right: none;
+  border-right: none;
 }
-
 table.advancement tr:last-child td {
-    border-bottom: none;
+  border-bottom: none;
 }
-
 table.attributeSelector .dijitSpinner {
-    width: 45px;
+  width: 45px;
 }
-
 table.attributeSelector tr.kom td {
-    background: grey;
+  background: grey;
 }
-
 table.attributeSelector tr.kdm td {
-    background: blue;
+  background: blue;
+}
+span.title {
+  color: #a81d1f;
+  font-weight: bold;
+}
+table.tracks td.hasChoice {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.hidden {
+  display: none;
 }

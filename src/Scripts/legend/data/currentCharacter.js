@@ -76,6 +76,13 @@
             this._checkTrack(this.fastTrack, track);
             this.fastTrack = track;
         },
+        _circleChoices: {},
+        addCircleChoice: function (circleName, choiceName) {
+            this._circleChoices[circleName] = choiceName;
+        },
+        getCircleChoice: function(circleName) {
+            return this._circleChoices[circleName];
+        },
         fullBuyInTrack: undefined,
         //Character Sheet Info
         _getAttribute: function (attribute) {

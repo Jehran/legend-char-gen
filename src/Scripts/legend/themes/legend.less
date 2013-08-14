@@ -1,0 +1,115 @@
+﻿@abilityBonusColor: rgb(64,173,72);
+@abilityPenaltyColor: rgb(169,28,31);
+@racePanelBorder: rgb(60,60,60);
+@accentColor: rgb(168, 29, 31);
+@racePanelWidth: 330px;
+
+table {
+    border-collapse: collapse
+}
+
+table.raceInfo td {
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+table.raceInfo td.abilityBonus:empty, table.raceInfo td.abilityPenalty:empty {
+    min-width: 0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: @abilityBonusColor;
+}
+
+table.raceInfo td.abilityBonus {
+    background-color: @abilityBonusColor;
+    min-width:(@racePanelWidth/6);
+    padding: 0px;
+}
+
+table.raceInfo td.abilityPenalty {
+    background-color: @abilityPenaltyColor;
+    min-width:(@racePanelWidth/6);
+    padding: 0px;
+}
+
+table.raceInfo td.halfWidthCell {
+    width: @racePanelWidth/2;
+    padding: 0px;
+}
+
+table.raceInfo td.raceBonus1 {
+    border-top: @racePanelBorder solid 1px;
+}
+
+table.raceInfo td.raceBonus2 {
+    border-bottom: @racePanelBorder solid 1px;
+}
+
+table.raceInfo tr.feats td{
+    background-color: rgb(51,51,51);
+}
+
+table.classInfo {
+    background: rgb(60,60,60);
+    width: 200px;
+    color: white;
+}
+
+table.classInfo td {
+    width: 50%;
+    padding: 0px;
+    border: 0px;
+    text-align: center;
+}
+
+table.advancement th {
+    color: @accentColor;
+    text-align: center;
+    padding: 5px;
+}
+
+table.advancement td {
+    border-right: @accentColor 1px solid;
+    border-bottom: @accentColor 1px solid;
+    text-align: center;
+}
+
+table.advancement td:last-child {
+    border-right: none;
+}
+
+table.advancement.fullBuyInDisabled td:nth-last-child(-n+2) {
+    border-right: none;
+}
+
+table.advancement tr:last-child td {
+    border-bottom: none;
+}
+
+table.attributeSelector .dijitSpinner {
+    width: 45px;
+}
+
+table.attributeSelector tr.kom td {
+    background: grey;
+}
+
+table.attributeSelector tr.kdm td {
+    background: blue;
+}
+
+span.title {
+    color: @accentColor;
+    font-weight: bold;
+}
+
+table.tracks td.hasChoice {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}

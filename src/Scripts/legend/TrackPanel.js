@@ -7,6 +7,7 @@ define([
     "dojo/string",
     "dojo/_base/lang",
     "dojo/dom-class",
+    "dojo/store/Memory",
     "./data/currentCharacter",
     "./form/AttributeSelector"
 ], function (
@@ -18,6 +19,7 @@ define([
     string,
     lang,
     domClass,
+    Memory,
     currentCharacter,
     AttributeSelector) {
     var attributes = ["Str", "Dex", "Con", "Int", "Wis", "Cha"];
@@ -39,9 +41,23 @@ define([
             },
             _setupTrack: function (name) {
                 var track = currentCharacter.get(name);
+                if (typeof (track) == "string") {
+                    this[name + "Head"].innerHTML = track;
+                    for (var i = 1; i <= 7; i++) {
+                        this[name + i].innerHTML = "Circle " + i;
+                    }
+                    return;
+                }
                 this[name + "Head"].innerHTML = track.name;
                 for (var i = 1; i <= 7; i++) {
-                    this[name + i].innerHTML = track.circles[i - 1].name;
+                    var cell = this[name + i];
+                    cell.innerHTML = track.circles[i - 1].name;
+                    if (track.circles[i - 1].choice) {
+                        domClass.add(cell, "hasChoice")
+                    }
+                    else {
+                        domClass.remove(cell, "hasChoice")
+                    }
                 }
             },
             _setupFastTrack: function () {
@@ -55,6 +71,40 @@ define([
             },
             _setupFullBuyInTrack: function () {
                 this._setupTrack("fullBuyIn");
+            },
+            _onTrackClick: function (event) {
+                var attachPoint = event.target.dataset["dojoAttachPoint"];
+                
+                var track = currentCharacter.get(attachPoint.substr(0, attachPoint.length - 1));
+                var circle = track.circles[Number(attachPoint.substr(attachPoint.length - 1, 1)) - 1];
+
+                this.circleName.innerHTML = circle.name;
+                this.circleText.innerHTML = circle.text;
+
+                if (circle.choice) {
+                    domClass.remove(this.circleChoice, "hidden");
+                    var data = [];
+                    var selectedChoice = currentCharacter.getCircleChoice(circle.name);
+                    var selectedId = 1;
+                    for (var i = 0; i < circle.choice.length; i++) {
+                        data.push({ id: i + 1, name: circle.choice[i].name });
+                        if (selectedChoice && selectedChoice == circle.choice[i].name)
+                            selectedId = i + 1;
+                    }
+                    var store = new Memory({ data: data });
+                    this.circleChoiceSelect.setStore(store);
+                    this.circleChoiceSelect.circle = circle;
+                    this.circleChoiceSelect.set("value", selectedId);
+                }
+                else {
+                    domClass.add(this.circleChoice, "hidden");
+                }
+            },
+            _onCircleChoiceSelect: function (value) {
+                var circle = this.circleChoiceSelect.circle;
+                var choice = circle.choice[value - 1];
+                currentCharacter.addCircleChoice(circle.name, choice.name)
+                this.circleChoiceText.innerHTML = choice.text;
             }
         });
 })
