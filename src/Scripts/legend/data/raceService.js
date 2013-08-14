@@ -1,7 +1,7 @@
 ﻿define([
     "dojo/store/Memory",
     "dojo/json",
-    "dojo/text!api/races.js"
+    "dojo/text!api/races.json"
 ], function (
     Memory,
     json,

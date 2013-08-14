@@ -74,6 +74,6 @@ define([
             },
             _onChaChange: function () {
                 currentCharacter.set("Cha", this.Cha.getValue());
-            },
+            }
         });
 })

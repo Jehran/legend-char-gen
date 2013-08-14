@@ -57,6 +57,10 @@ define([
                 }
             },
             _setupBonusBox: function (td, data) {
+                if (!data) {
+                    td.innerHTML = "";
+                    return;
+                }
                 switch (data[0]) {
                     case "skillBonus":
                         td.innerHTML = string.substitute("+1 (+1/8 levels) racial bonus to ${0}", [data[1]]);

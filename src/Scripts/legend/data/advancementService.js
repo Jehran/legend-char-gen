@@ -1,7 +1,7 @@
 ﻿define([
     "dojo/json",
-    "dojo/text!api/ab.js",
-    "dojo/text!api/saves.js"
+    "dojo/text!api/ab.json",
+    "dojo/text!api/saves.json"
 ], function (
     json,
     abJson,

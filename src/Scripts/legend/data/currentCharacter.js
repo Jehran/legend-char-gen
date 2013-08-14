@@ -84,6 +84,12 @@
             return this._circleChoices[circleName];
         },
         fullBuyInTrack: undefined,
+        //Skills
+        getNumberOfSkills: function() {
+            if (this.selectedRace.racialTrack)
+                return this.selectedRace.racialTrack.skills;
+            return this.selectedClass.skills;
+        },
         //Character Sheet Info
         _getAttribute: function (attribute) {
             return this[attribute] + this.getRaceMod(attribute)
