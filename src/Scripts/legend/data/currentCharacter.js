@@ -92,25 +92,43 @@
         _StrGetter: function () {
             return this._getAttribute("Str");
         },
+        _StrSetter: function (value) {
+            this.Str = value;
+        },
         Con: 8,
         _ConGetter: function () {
             return this._getAttribute("Con");
+        },
+        _ConSetter: function (value) {
+            this.Str = value;
         },
         Dex: 8,
         _DexGetter: function () {
             return this._getAttribute("Dex");
         },
+        _DexSetter: function (value) {
+            this.Str = value;
+        },
         Int: 8,
         _IntGetter: function () {
             return this._getAttribute("Int");
+        },
+        _IntSetter: function (value) {
+            this.Str = value;
         },
         Wis: 8,
         _WisGetter: function () {
             return this._getAttribute("Wis");
         },
+        _WisSetter: function (value) {
+            this.Str = value;
+        },
         Cha: 8,
         _ChaGetter: function () {
             return this._getAttribute("Cha");
+        },
+        _ChaSetter: function (value) {
+            this.Str = value;
         },
 
     });

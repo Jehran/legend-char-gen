@@ -2,6 +2,7 @@
     return declare("legend.form.AttributeSelector", [NumberSpinner], {
         value: 8,
         smallDelta: 2,
+        intermediateChanges: true,
         constructor: function () {
             this.constraints = { min: 8, max: 18, places: 0 };
         },
