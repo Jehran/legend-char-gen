@@ -66,9 +66,9 @@
                 if (oldValue.kdmOverride)
                     this._kdmTrackOverride = undefined;
             }
-            if (newValue.komOverride)
+            if (newValue.komOverride && newValue.komOverride != this.getKDM())
                 this._komTrackOverride = newValue.komOverride;
-            if (newValue.kdmOverride)
+            if (newValue.kdmOverride && newValue.kdmOverride != this.getKOM())
                 this._kdmTrackOverride = newValue.kdmOverride;
         },
         slowTrack: undefined,
@@ -99,6 +99,12 @@
             if (this.selectedRace.racialTrack)
                 return this.selectedRace.racialTrack.skills;
             return this.selectedClass.skills;
+        },
+        _skills: [],
+        _skillsSetter: function (value) { this._skills = value; },
+        _skillsGetter: function (value) { return this._skills; },
+        isSkillTrained: function (skill) {
+            return this._skills.indexOf(skill) >= 0;
         },
         //Character Sheet Info
         _getAttribute: function (attribute) {

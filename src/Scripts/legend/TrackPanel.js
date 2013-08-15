@@ -109,6 +109,7 @@ define([
                     this.circleChoiceSelect.setStore(store);
                     this.circleChoiceSelect.circle = circle;
                     this.circleChoiceSelect.set("value", selectedId);
+                    this._onCircleChoiceSelect(selectedId);
                 }
                 else {
                     domClass.add(this.circleChoice, "hidden");

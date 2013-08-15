@@ -1,43 +1,54 @@
 <div>
+    <table>
+        <tr>
+            <th>KOM:</th>
+            <td data-dojo-attach-point="kom"></td>
+            <td class="hidden"><input data-dojo-attach-point="komOverride" data-dojo-type="dijit.form.CheckBox" id="komOverride"  /> <label for="komOverride">Override</label></td>
+        </tr>
+        <tr>
+            <th>KDM:</th>
+            <td data-dojo-attach-point="kdm"></td>
+            <td class="hidden"><input data-dojo-attach-point="kdmOverride" data-dojo-type="dijit.form.CheckBox" id="kdmOverride"  /> <label for="kdmOverride">Override</label></td>
+        </tr>
+        <tr data-dojo-attach-point="ksmRow" class="hidden">
+            <th>KSM:</th>
+            <td data-dojo-attach-point="ksm"></td>
+            <td><input data-dojo-attach-point="ksmOverride" data-dojo-type="dijit.form.CheckBox" id="ksmOverride"  /> <label for="ksmOverride">Override</label></td>
+        </tr>
+    </table>
+    <br />
     <table class="attributeSelector">
         <tr data-dojo-attach-point="StrRow">
-            
-            <td data-dojo-attach-point="StrKAM"></td>
             <th>Str</th>
             <td data-dojo-attach-point="StrTotal"></td>
             <td><div data-dojo-attach-point="Str" data-dojo-type="legend.form.AttributeSelector" data-dojo-attach-event="onChange: _onStrChange"></div></td>
             <td data-dojo-attach-point="StrRace"></td>
         </tr>
         <tr data-dojo-attach-point="DexRow">
-            <td data-dojo-attach-point="DexKAM"></td>
             <th>Dex</th>
             <td data-dojo-attach-point="DexTotal"></td>
             <td><div data-dojo-attach-point="Dex" data-dojo-type="legend.form.AttributeSelector" data-dojo-attach-event="onChange: _onDexChange"></div></td>
             <td data-dojo-attach-point="DexRace"></td>
         </tr>
         <tr data-dojo-attach-point="ConRow">
-            <td data-dojo-attach-point="ConKAM"></td>
             <th>Con</th>
             <td data-dojo-attach-point="ConTotal"></td>
             <td><div data-dojo-attach-point="Con" data-dojo-type="legend.form.AttributeSelector" data-dojo-attach-event="onChange: _onConChange"></div></td>
             <td data-dojo-attach-point="ConRace"></td>
         </tr>
         <tr data-dojo-attach-point="IntRow">
-            <td data-dojo-attach-point="IntKAM"></td>
             <th>Int</th>
             <td data-dojo-attach-point="IntTotal"></td>
             <td><div data-dojo-attach-point="Int" data-dojo-type="legend.form.AttributeSelector" data-dojo-attach-event="onChange: _onIntChange"></div></td>
             <td data-dojo-attach-point="IntRace"></td>
         </tr>
         <tr data-dojo-attach-point="WisRow">
-            <td data-dojo-attach-point="WisKAM"></td>
             <th>Wis</th>
             <td data-dojo-attach-point="WisTotal"></td>
             <td><div data-dojo-attach-point="Wis" data-dojo-type="legend.form.AttributeSelector" data-dojo-attach-event="onChange: _onWisChange"></div></td>
             <td data-dojo-attach-point="WisRace"></td>
         </tr>
         <tr data-dojo-attach-point="ChaRow">
-            <td data-dojo-attach-point="ChaKAM"></td>
             <th>Cha</th>
             <td data-dojo-attach-point="ChaTotal"></td>
             <td><div data-dojo-attach-point="Cha" data-dojo-type="legend.form.AttributeSelector" data-dojo-attach-event="onChange: _onChaChange"></div></td>
