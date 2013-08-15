@@ -1,5 +1,5 @@
-﻿@abilityBonusColor: rgb(64,173,72);
-@abilityPenaltyColor: rgb(169,28,31);
+﻿@attributeBonusColor: rgb(64,173,72);
+@attributePenaltyColor: rgb(169,28,31);
 @racePanelBorder: rgb(60,60,60);
 @accentColor: rgb(168, 29, 31);
 @racePanelWidth: 330px;
@@ -15,22 +15,25 @@ table.raceInfo td {
     border: none;
 }
 
-table.raceInfo td.abilityBonus:empty, table.raceInfo td.abilityPenalty:empty {
+table.raceInfo td.attributeBonus:empty, table.raceInfo td.attributePenalty:empty {
     min-width: 0px;
     padding: 0px;
     margin: 0px;
-    background-color: @abilityBonusColor;
+    background-color: @attributeBonusColor;
 }
 
-table.raceInfo td.abilityBonus{
-    background-color: @abilityBonusColor;
+td {
+    display: table-cell !important;
+}
+
+table.raceInfo td.attributeBonus{
+    background-color: @attributeBonusColor;
     min-width:(@racePanelWidth/6);
     padding: 0px;
-    display: table-cell;
 }
 
-table.raceInfo td.abilityPenalty{
-    background-color: @abilityPenaltyColor;
+table.raceInfo td.attributePenalty{
+    background-color: @attributePenaltyColor;
     min-width:(@racePanelWidth/6);
     padding: 0px;
     display: table-cell;

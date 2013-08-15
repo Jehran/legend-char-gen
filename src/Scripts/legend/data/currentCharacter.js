@@ -18,9 +18,9 @@
         getRaceMod: function (attribute) {
             if (this._raceAttributeOverride[0] == attribute)
                 return this._raceAttributeOverride[1];
-            if (this.selectedRace.abilityBonuses.indexOf(attribute) >= 0)
+            if (this.selectedRace.attributeBonuses.indexOf(attribute) >= 0)
                 return 2;
-            if (this.selectedRace.abilityPenalty.indexOf(attribute) >= 0)
+            if (this.selectedRace.attributePenalty.indexOf(attribute) >= 0)
                 return -2;
             return 0;
         },

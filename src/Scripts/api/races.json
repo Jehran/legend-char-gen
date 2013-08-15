@@ -2,8 +2,8 @@
 	{
 	    "id": "dwarf", 
 	    "name": "Dwarf",
-	    "abilityBonuses": ["Con", "Int"],
-        "abilityPenalty": "Cha",
+	    "attributeBonuses": ["Con", "Int"],
+        "attributePenalty": "Cha",
 	    "size": "Average",
 	    "type": "Humanoid",
 	    "bonuses": [ 
@@ -19,8 +19,8 @@
 	{
 	    "id": "elf", 
 	    "name": "Elf",
-	    "abilityBonuses": [ "Dex", ["Int", "Wis", "Cha"]],
-        "abilityPenalty": "Con",
+	    "attributeBonuses": [ "Dex", ["Int", "Wis", "Cha"]],
+        "attributePenalty": "Con",
 	    "size": "Average",
 	    "type": "Humanoid",
 	    "bonuses": [ 
@@ -36,8 +36,8 @@
 	{
 	    "id": "gnome", 
 	    "name": "Gnome",
-	    "abilityBonuses": ["Con", "Cha"],
-	    "abilityPenalty": "Str",
+	    "attributeBonuses": ["Con", "Cha"],
+	    "attributePenalty": "Str",
 	    "size": "Small",
 	    "type": "Humanoid",
 	    "bonuses": [
@@ -53,8 +53,8 @@
 	{
 	    "id": "halfling", 
 	    "name": "Halfling",
-	    "abilityBonuses": ["Dex", ""],
-	    "abilityPenalty": "",
+	    "attributeBonuses": ["Dex", ""],
+	    "attributePenalty": "",
 	    "size": "Small",
 	    "type": "Humanoid",
 	    "bonuses": [
@@ -66,8 +66,8 @@
 	{
 	    "id": "human", 
 	    "name": "Human",
-	    "abilityBonuses": [["Str", "Con", "Dex", "Wis", "Int", "Cha"], ""],
-	    "abilityPenalty": "",
+	    "attributeBonuses": [["Str", "Con", "Dex", "Wis", "Int", "Cha"], ""],
+	    "attributePenalty": "",
 	    "size": "Average",
 	    "type": "Humanoid",
 	    "bonuses": [ 
@@ -79,8 +79,8 @@
 	{
 	    "id": "orc", 
 	    "name": "Orc",
-	    "abilityBonuses": ["Con", "Str"],
-	    "abilityPenalty": "Cha",
+	    "attributeBonuses": ["Con", "Str"],
+	    "attributePenalty": "Cha",
 	    "size": "Average",
 	    "type": "Humanoid",
 	    "bonuses": [
@@ -96,8 +96,8 @@
 	{
 	    "id": "celestial", 
 	    "name": "Celestial",
-	    "abilityBonuses": ["Wis", ""],
-	    "abilityPenalty": "",
+	    "attributeBonuses": ["Wis", ""],
+	    "attributePenalty": "",
 	    "size": "Average",
 	    "type": "Outsider",
 	    "bonuses": [
@@ -122,8 +122,8 @@
 	{
 	    "id": "demon", 
 	    "name": "Demon",
-	    "abilityBonuses": [["Str", "Con", "Dex", "Wis", "Int", "Cha"], ""],
-	    "abilityPenalty": "",
+	    "attributeBonuses": [["Str", "Con", "Dex", "Wis", "Int", "Cha"], ""],
+	    "attributePenalty": "",
 	    "size": "Average",
 	    "type": "Outsider",
 	    "bonuses": [
@@ -148,8 +148,8 @@
 	{
 	    "id": "dragonAverage", 
 	    "name": "Dragon (Average)",
-	    "abilityBonuses": ["Cha", ""],
-	    "abilityPenalty": "",
+	    "attributeBonuses": ["Cha", ""],
+	    "attributePenalty": "",
 	    "size": "Average",
 	    "type": "Magical beast",
 	    "bonuses": [
@@ -173,8 +173,8 @@
 	{
 	    "id": "dragonLarge", 
 	    "name": "Dragon (Large)",
-	    "abilityBonuses": ["Cha", ""],
-	    "abilityPenalty": "",
+	    "attributeBonuses": ["Cha", ""],
+	    "attributePenalty": "",
 	    "size": "Large",
 	    "type": "Magical beast",
 	    "bonuses": [
@@ -198,8 +198,8 @@
 	{
 	    "id": "sentientConstruct", 
 	    "name": "Sentient Construct",
-	    "abilityBonuses": [["Dex", "Int"], "Con"],
-	    "abilityPenalty": "Cha",
+	    "attributeBonuses": [["Dex", "Int"], "Con"],
+	    "attributePenalty": "Cha",
 	    "size": "Average",
 	    "type": "Construct",
 	    "bonuses": [
@@ -223,8 +223,8 @@
 	{
 	    "id": "undeadGhoul", 
 	    "name": "Undead (Ghoul)",
-	    "abilityBonuses": ["Str", "Con"],
-	    "abilityPenalty": "Wis",
+	    "attributeBonuses": ["Str", "Con"],
+	    "attributePenalty": "Wis",
 	    "size": "Average",
 	    "type": "Undead",
 	    "bonuses": [
@@ -248,8 +248,8 @@
 	{
 	    "id": "undeadLich", 
 	    "name": "Undead (Lich)",
-	    "abilityBonuses": [["Int", "Wis"], ""],
-	    "abilityPenalty": "",
+	    "attributeBonuses": [["Int", "Wis"], ""],
+	    "attributePenalty": "",
 	    "size": "Average",
 	    "type": "Undead",
 	    "bonuses": [
@@ -274,8 +274,8 @@
 	{
 	    "id": "undeadMummy", 
 	    "name": "Undead (Mummy)",
-	    "abilityBonuses": ["Cha", ""],
-	    "abilityPenalty": "",
+	    "attributeBonuses": ["Cha", ""],
+	    "attributePenalty": "",
 	    "size": "Average",
 	    "type": "Undead",
 	    "bonuses": [
@@ -299,8 +299,8 @@
 	{
 	    "id": "undeadSkeletonChampion", 
 	    "name": "Undead (Skeleton Champion)",
-	    "abilityBonuses": [["Str", "Dex", "Con"], ""],
-	    "abilityPenalty": "",
+	    "attributeBonuses": [["Str", "Dex", "Con"], ""],
+	    "attributePenalty": "",
 	    "size": "Average",
 	    "type": "Undead",
 	    "bonuses": [
@@ -324,8 +324,8 @@
 	{
 	    "id": "undeadVampire", 
 	    "name": "Undead (Vampire)",
-	    "abilityBonuses": [["Int", "Wis", "Cha", "Dex", "Str", "Con"], ""],
-	    "abilityPenalty": "",
+	    "attributeBonuses": [["Int", "Wis", "Cha", "Dex", "Str", "Con"], ""],
+	    "attributePenalty": "",
 	    "size": "Average",
 	    "type": "Undead",
 	    "bonuses": [
@@ -349,8 +349,8 @@
 	{
 	    "id": "utterBruteSmall", 
 	    "name": "Utter Brute (Small)",
-	    "abilityBonuses": ["Con", ""],
-	    "abilityPenalty": "",
+	    "attributeBonuses": ["Con", ""],
+	    "attributePenalty": "",
 	    "size": "Small",
 	    "type": "Varies",
 	    "bonuses": [
@@ -370,8 +370,8 @@
 	{
 	    "id": "utterBruteAverage", 
 	    "name": "Utter Brute (Average)",
-	    "abilityBonuses": ["Con", ""],
-	    "abilityPenalty": "",
+	    "attributeBonuses": ["Con", ""],
+	    "attributePenalty": "",
 	    "size": "Average",
 	    "type": "Varies",
 	    "bonuses": [
@@ -391,8 +391,8 @@
 	{
 	    "id": "utterBruteLarge", 
 	    "name": "Utter Brute (Large)",
-	    "abilityBonuses": ["Con", ""],
-	    "abilityPenalty": "",
+	    "attributeBonuses": ["Con", ""],
+	    "attributePenalty": "",
 	    "size": "Large",
 	    "type": "Varies",
 	    "bonuses": [

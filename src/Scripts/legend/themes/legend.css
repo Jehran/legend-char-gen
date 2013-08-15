@@ -7,20 +7,22 @@ table.raceInfo td {
   color: white;
   border: none;
 }
-table.raceInfo td.abilityBonus:empty,
-table.raceInfo td.abilityPenalty:empty {
+table.raceInfo td.attributeBonus:empty,
+table.raceInfo td.attributePenalty:empty {
   min-width: 0px;
   padding: 0px;
   margin: 0px;
   background-color: #40ad48;
 }
-table.raceInfo td.abilityBonus {
+td {
+  display: table-cell !important;
+}
+table.raceInfo td.attributeBonus {
   background-color: #40ad48;
   min-width: 55px;
   padding: 0px;
-  display: table-cell;
 }
-table.raceInfo td.abilityPenalty {
+table.raceInfo td.attributePenalty {
   background-color: #a91c1f;
   min-width: 55px;
   padding: 0px;
