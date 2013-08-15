@@ -32,6 +32,7 @@ define([
                 currentCharacter.watch("mediumTrack", lang.hitch(this, this._setupMediumTrack));
                 currentCharacter.watch("slowTrack", lang.hitch(this, this._setupSlowTrack));
                 currentCharacter.watch("fullBuyInTrack", lang.hitch(this, this._setupFullBuyInTrack));
+                currentCharacter.watch("selectedClass", lang.hitch(this, this._classChanged));
                 this.recalculate();
             },
             recalculate: function () {
@@ -39,12 +40,19 @@ define([
                 this._setupMediumTrack();
                 this._setupSlowTrack();
             },
+            _classChanged: function() {
+                this.circleName.innerHTML = "";
+                this.circleText.innerHTML = "";
+                domClass.add(this.circleChoice, "hidden");
+            },
             _setupTrack: function (name) {
                 var track = currentCharacter.get(name);
                 if (typeof (track) == "string") {
                     this[name + "Head"].innerHTML = track;
                     for (var i = 1; i <= 7; i++) {
-                        this[name + i].innerHTML = "Circle " + i;
+                        var cell = this[name + i];
+                        domClass.remove(cell)
+                        cell.innerHTML = "Circle " + i;
                     }
                     return;
                 }
@@ -76,7 +84,13 @@ define([
                 var attachPoint = event.target.dataset["dojoAttachPoint"];
                 
                 var track = currentCharacter.get(attachPoint.substr(0, attachPoint.length - 1));
-                var circle = track.circles[Number(attachPoint.substr(attachPoint.length - 1, 1)) - 1];
+                var circleNum = Number(attachPoint.substr(attachPoint.length - 1, 1));
+                if (typeof (track) == "string") {
+                    this.circleName.innerHTML = track + ": Circle " + circleNum;
+                    this.circleText.innerHTML = "See book";
+                    return;
+                }
+                var circle = track.circles[circleNum - 1];
 
                 this.circleName.innerHTML = circle.name;
                 this.circleText.innerHTML = circle.text;
