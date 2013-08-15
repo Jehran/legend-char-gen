@@ -3,9 +3,9 @@
     <br /><br />
     <table class="raceInfo">
         <tr>
-            <td data-dojo-attach-point="abilityBonus1" class="abilityBonus"    rowspan="2" ></td>
-            <td data-dojo-attach-point="abilityBonus2" class="abilityBonus"    rowspan="2" ></td>
-            <td data-dojo-attach-point="abilityPenalty" class="abilityPenalty" rowspan="2" ></td>
+            <td rowspan="2"class="abilityBonus" data-dojo-type="dijit.layout.ContentPane" data-dojo-attach-point="abilityBonus1"></td>
+            <td rowspan="2"class="abilityBonus" data-dojo-type="dijit.layout.ContentPane" data-dojo-attach-point="abilityBonus2"></td>
+            <td rowspan="2"class="abilityPenalty" data-dojo-type="dijit.layout.ContentPane" data-dojo-attach-point="abilityPenalty"></td>
             <td data-dojo-attach-point="size" class="halfWidthCell"></td>
         </tr>
         <tr>
@@ -22,4 +22,28 @@
             <td data-dojo-attach-point="bonusFeats"></td>
         </tr>
     </table>
+    <br />
+    <div data-dojo-attach-point="racialTrack" class="hidden">
+       <table class="classInfo">
+            <tr class="value">
+                <td data-dojo-attach-point="hitPoints"></td>
+                <td data-dojo-attach-point="skills"></td>
+            </tr>
+            <tr class="label">
+                <td>HP/Level</td>
+                <td>SKILLS</td>
+            </tr>
+            <tr class="value">
+                <td data-dojo-attach-point="kom"></td>
+                <td data-dojo-attach-point="kdm"></td>
+            </tr>
+            <tr class="label">
+                <td>KOM</td>
+                <td>KDM</td>
+            </tr>
+        </table>
+        <br />
+        <table data-dojo-attach-point="advancement" class="advancement">
+    </table>
+    </div>
 </div>

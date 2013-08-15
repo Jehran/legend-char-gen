@@ -32,6 +32,7 @@ define([
                     select.setStore(skillStore);
                     select.set("value", skillStore.data[i].id);
                     select.placeAt(this.domNode);
+                    select.startup();
                     domConstruct.create("br", {}, this.domNode);
                 }
             }

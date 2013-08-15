@@ -18,11 +18,13 @@ table.raceInfo td.abilityBonus {
   background-color: #40ad48;
   min-width: 55px;
   padding: 0px;
+  display: table-cell;
 }
 table.raceInfo td.abilityPenalty {
   background-color: #a91c1f;
   min-width: 55px;
   padding: 0px;
+  display: table-cell;
 }
 table.raceInfo td.halfWidthCell {
   width: 165px;

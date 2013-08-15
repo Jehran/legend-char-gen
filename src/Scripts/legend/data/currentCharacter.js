@@ -4,14 +4,20 @@
         selectedRace: undefined,
         _selectedRaceSetter: function (value) {
             this.selectedRace = value;
-            this._raceAbilityOverrides = {};
+            this._raceAttributeOverride = [];
             this._raceBonusOverrides = [];
         },
-        _raceAbilityOverrides: {},
+        _raceAttributeOverride: [],
+        _raceAttributeOverrideSetter: function (data) {
+            this._raceAttributeOverride = [ data.attr, data.value ];
+        },
+        _raceAttributeOverrideGetter: function () {
+            return { attr: this._raceAttributeOverride[0], value: this._raceAttributeOverride[1] };
+        },
         _raceBonusOverrides: [],
         getRaceMod: function (attribute) {
-            if (this._raceAbilityOverrides[attribute])
-                return this._raceAbilityOverrides[attribute];
+            if (this._raceAttributeOverride[0] == attribute)
+                return this._raceAttributeOverride[1];
             if (this.selectedRace.abilityBonuses.indexOf(attribute) >= 0)
                 return 2;
             if (this.selectedRace.abilityPenalty.indexOf(attribute) >= 0)

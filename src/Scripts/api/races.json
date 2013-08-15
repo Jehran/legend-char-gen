@@ -114,9 +114,9 @@
 	        "skills": 6,
 	        "kom": "Wis",
 	        "kdm": "Str",
-	        "bab": "High",
-	        "highSaves": ["Fort", "Will"],
-	        "lowSave": "Ref"
+	        "ab": "High",
+	        "goodSaves": ["Fort", "Will"],
+	        "poorSave": "Ref"
 	    }
 	},
 	{
@@ -140,9 +140,9 @@
 	        "skills": 6,
 	        "kom": "Cha",
 	        "kdm": "Con",
-	        "bab": "High",
-	        "highSaves": ["Ref", "Will"],
-	        "lowSave": "Fort"
+	        "ab": "High",
+	        "goodSaves": ["Ref", "Will"],
+	        "poorSave": "Fort"
 	    }
 	},
 	{
@@ -165,9 +165,9 @@
 	        "skills": 5,
 	        "kom": "Str",
 	        "kdm": "Cha",
-	        "bab": "High",
-	        "highSaves": ["Any", "Any"],
-	        "lowSave": "Any"
+	        "ab": "High",
+	        "goodSaves": ["Any", "Any"],
+	        "poorSave": "Any"
 	    }
 	},
 	{
@@ -190,9 +190,9 @@
 	        "skills": 5,
 	        "kom": "Str",
 	        "kdm": "Cha",
-	        "bab": "High",
-	        "highSaves": ["Any", "Any"],
-	        "lowSave": "Any"
+	        "ab": "High",
+	        "goodSaves": ["Any", "Any"],
+	        "poorSave": "Any"
 	    }
 	},
 	{
@@ -215,9 +215,9 @@
 	        "skills": 5,
 	        "kom": "Int",
 	        "kdm": "Dex",
-	        "bab": "High",
-	        "highSaves": ["Fort", "Will"],
-	        "lowSave": "Ref"
+	        "ab": "High",
+	        "goodSaves": ["Fort", "Will"],
+	        "poorSave": "Ref"
 	    }
 	},
 	{
@@ -240,9 +240,9 @@
 	        "skills": 5,
 	        "kom": "Str",
 	        "kdm": "Con",
-	        "bab": "High",
-	        "highSaves": ["Fort", "Will"],
-	        "lowSave": "Ref"
+	        "ab": "High",
+	        "goodSaves": ["Fort", "Will"],
+	        "poorSave": "Ref"
 	    }
 	},
 	{
@@ -266,9 +266,9 @@
 	        "skills": 5,
 	        "kom": "Int",
 	        "kdm": "Wis",
-	        "bab": "High",
-	        "highSaves": ["Fort", "Will"],
-	        "lowSave": "Ref"
+	        "ab": "High",
+	        "goodSaves": ["Fort", "Will"],
+	        "poorSave": "Ref"
 	    }
 	},
 	{
@@ -291,9 +291,9 @@
 	        "skills": 5,
 	        "kom": "Str",
 	        "kdm": "Cha",
-	        "bab": "High",
-	        "highSaves": ["Fort", "Will"],
-	        "lowSave": "Ref"
+	        "ab": "High",
+	        "goodSaves": ["Fort", "Will"],
+	        "poorSave": "Ref"
 	    }
 	},
 	{
@@ -316,9 +316,9 @@
 	        "skills": 5,
 	        "kom": "Str",
 	        "kdm": ["Dex", "Int"],
-	        "bab": "High",
-	        "highSaves": ["Fort", "Will"],
-	        "lowSave": "Ref"
+	        "ab": "High",
+	        "goodSaves": ["Fort", "Will"],
+	        "poorSave": "Ref"
 	    }
 	},
 	{
@@ -341,9 +341,9 @@
 	        "skills": 5,
 	        "kom": "Dex",
 	        "kdm": "Cha",
-	        "bab": "High",
-	        "highSaves": ["Fort", "Will"],
-	        "lowSave": "Ref"
+	        "ab": "High",
+	        "goodSaves": ["Fort", "Will"],
+	        "poorSave": "Ref"
 	    }
 	},
 	{
@@ -362,9 +362,9 @@
 	        "skills": 4,
 	        "kom": "Con",
 	        "kdm": "Str",
-	        "bab": "High",
-	        "highSaves": ["Fort", "Any"],
-	        "lowSave": "Any"
+	        "ab": "High",
+	        "goodSaves": ["Fort", "Any"],
+	        "poorSave": "Any"
 	    }
 	},
 	{
@@ -383,9 +383,9 @@
 	        "skills": 4,
 	        "kom": "Con",
 	        "kdm": "Str",
-	        "bab": "High",
-	        "highSaves": ["Fort", "Any"],
-	        "lowSave": "Any"
+	        "ab": "High",
+	        "goodSaves": ["Fort", "Any"],
+	        "poorSave": "Any"
 	    }
 	},
 	{
@@ -404,9 +404,9 @@
 	        "skills": 4,
 	        "kom": "Con",
 	        "kdm": "Str",
-	        "bab": "High",
-	        "highSaves": ["Fort", "Any"],
-	        "lowSave": "Any"
+	        "ab": "High",
+	        "goodSaves": ["Fort", "Any"],
+	        "poorSave": "Any"
 	    }
 	}
 ]

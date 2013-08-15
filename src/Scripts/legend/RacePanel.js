@@ -6,8 +6,12 @@ define([
 	'dojo/text!./templates/RacePanel.html',
     "./data/raceService",
     "dojo/string",
+    "dojo/dom-construct",
+    "dojo/dom-class",
     "./data/currentCharacter",
-    "dijit/form/Select"
+    "./data/advancementService",
+    "dijit/form/Select",
+    "dijit/layout/ContentPane"
 ], function (
 	declare,
 	ContentPane,
@@ -16,8 +20,12 @@ define([
 	template,
     raceService,
     string,
+    domConstruct,
+    domClass,
     currentCharacter,
-    Select) {
+    advancementService,
+    Select,
+    ContentPane) {
     return declare('legend.RacePanel', [ContentPane, _TemplatedMixin, _WidgetsInTemplateMixin],
         {
             raceStore: undefined,
@@ -39,21 +47,61 @@ define([
                 this._setupBonusBox(this.raceBonus1, r.bonuses[0]);
                 this._setupBonusBox(this.raceBonus2, r.bonuses[1]);
                 this._setupFeatBox(r.bonusFeats);
-            },
-            _setupAbilityBox: function (td, data, isBonus) {
-                if (data == "") {
-                    td.innerHTML = "";
-                    return;
+                if (r.racialTrack) {
+                    domClass.remove(this.racialTrack, "hidden");
+                    var c = r.racialTrack;
+                    this.hitPoints.innerHTML = c.hp;
+                    this.skills.innerHTML = c.skills;
+                    this._setupKAM(this.kom, c.kom);
+                    this._setupKAM(this.kdm, c.kdm);
+                    this._setupAdvancementTable(c);
+                } else {
+                    domClass.add(this.racialTrack, "hidden");
                 }
+            },
+            _setupKAM: function (td, data) {
                 if (Array.isArray(data)) {
                     var select = "<select>";
                     for (var i = 0; i < data.length; i++) {
                         select += string.substitute("<option value='${0}'>${0}</option>", [data[i]]);
                     }
                     select += "</select>";
-                    td.innerHTML = string.substitute("${0}2<br/>${1}", [isBonus ? "+" : "-", select]);
+                    td.innerHTML = select;
+                }
+                else {
+                    td.innerHTML = data;
+                }
+            },
+            _setupAdvancementTable: function (c) {
+                var table = string.substitute("<tr><th>Level</th><th>BAB</th><th>${0}</th><th>${1}</th><th>${2}</th></tr>",
+                    [c.goodSaves[0], c.goodSaves[1], c.poorSave]);
+                for (var i = 1; i <= 20; i++) {
+                    table += string.substitute("<tr><td>${0}</td><td>+${1}</td><td>+${2}</td><td>+${2}</td><td>+${3}</td></tr>",
+                        [i, advancementService.getAb(c.ab, i), advancementService.getSave("Good", i), advancementService.getSave("Poor", i)]);
+                }
+                this.advancement.innerHTML = table;
+            },
+            _setupAbilityBox: function (panel, data, isBonus) {
+                panel.destroyDescendants(false);
+                domConstruct.empty(panel.domNode);
+                if (data == "") {
+                    return;
+                }
+                if (Array.isArray(data)) {
+                    var options = [];
+                    for (var i = 0; i < data.length; i++) {
+                        options.push({ value: data[i], label: data[i] });
+                    }
+                    panel.domNode.innerHTML = string.substitute("${0}2<br/>", [isBonus ? "+" : "-"]);
+                    var select = new Select({ options: options });
+                    select.on("change", function (attr) {
+                        currentCharacter.set("raceAttributeOverride", { attr: attr, value: isBonus ? 2 : -2 });
+                    });
+                    select.placeAt(panel.domNode);
+                    select.startup();
+                    currentCharacter.set("raceAttributeOverride", { attr: select.getValue(), value: isBonus ? 2 : -2 });
                 } else {
-                    td.innerHTML = string.substitute("${0}2<br/>${1}", [isBonus ? "+" : "-", data]);
+                    panel.domNode.innerHTML = string.substitute("${0}2<br/>${1}", [isBonus ? "+" : "-", data]);
                 }
             },
             _setupBonusBox: function (td, data) {
