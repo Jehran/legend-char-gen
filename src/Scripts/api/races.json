@@ -146,36 +146,11 @@
 	    }
 	},
 	{
-	    "id": "dragonAverage", 
-	    "name": "Dragon (Average)",
+	    "id": "dragon", 
+	    "name": "Dragon",
 	    "attributeBonuses": ["Cha", ""],
 	    "attributePenalty": "",
-	    "size": "Average",
-	    "type": "Magical beast",
-	    "bonuses": [
-	        [ "extraVision", "[Darkvision]" ]
-	    ],
-	    "bonusFeats": [
-		    "You Will Falter",
-		    "Open Lesser Binding", 
-		    "The Earth Cracks"
-	    ],
-	    "racialTrack": {
-	        "hp": 10,
-	        "skills": 5,
-	        "kom": "Str",
-	        "kdm": "Cha",
-	        "ab": "High",
-	        "goodSaves": ["Any", "Any"],
-	        "poorSave": "Any"
-	    }
-	},
-	{
-	    "id": "dragonLarge", 
-	    "name": "Dragon (Large)",
-	    "attributeBonuses": ["Cha", ""],
-	    "attributePenalty": "",
-	    "size": "Large",
+	    "size": ["Average", "Large"],
 	    "type": "Magical beast",
 	    "bonuses": [
 	        [ "extraVision", "[Darkvision]" ]
@@ -347,53 +322,11 @@
 	    }
 	},
 	{
-	    "id": "utterBruteSmall", 
-	    "name": "Utter Brute (Small)",
+	    "id": "utterBrute", 
+	    "name": "Utter Brute",
 	    "attributeBonuses": ["Con", ""],
 	    "attributePenalty": "",
-	    "size": "Small",
-	    "type": "Varies",
-	    "bonuses": [
-	        [ "extraVision", "[Darkvision]" ]
-	    ],
-	    "bonusFeats": "Weaponized",
-	    "racialTrack": {
-	        "hp": 12,
-	        "skills": 4,
-	        "kom": "Con",
-	        "kdm": "Str",
-	        "ab": "High",
-	        "goodSaves": ["Fort", "Any"],
-	        "poorSave": "Any"
-	    }
-	},
-	{
-	    "id": "utterBruteAverage", 
-	    "name": "Utter Brute (Average)",
-	    "attributeBonuses": ["Con", ""],
-	    "attributePenalty": "",
-	    "size": "Average",
-	    "type": "Varies",
-	    "bonuses": [
-	        [ "extraVision", "[Darkvision]" ]
-	    ],
-	    "bonusFeats": "Weaponized",
-	    "racialTrack": {
-	        "hp": 12,
-	        "skills": 4,
-	        "kom": "Con",
-	        "kdm": "Str",
-	        "ab": "High",
-	        "goodSaves": ["Fort", "Any"],
-	        "poorSave": "Any"
-	    }
-	},
-	{
-	    "id": "utterBruteLarge", 
-	    "name": "Utter Brute (Large)",
-	    "attributeBonuses": ["Con", ""],
-	    "attributePenalty": "",
-	    "size": "Large",
+	    "size": ["Small", "Average", "Large"],
 	    "type": "Varies",
 	    "bonuses": [
 	        [ "extraVision", "[Darkvision]" ]

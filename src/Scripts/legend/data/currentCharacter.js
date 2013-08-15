@@ -6,7 +6,11 @@
             this.selectedRace = value;
             this._raceAttributeOverride = [];
             this._raceBonusOverrides = [];
+            this._size = Array.isArray(value.size) ? value.size[0] : value.size;
         },
+        _size: undefined,
+        _sizeSetter: function (value) { this._size = value; },
+        _sizeGetter: function () { return this._size; },
         _raceAttributeOverride: [],
         _raceAttributeOverrideSetter: function (data) {
             this._raceAttributeOverride = [ data.attr, data.value ];

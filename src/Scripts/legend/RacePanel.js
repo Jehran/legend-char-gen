@@ -37,10 +37,11 @@ define([
             _onRaceChange: function (value) {
                 currentCharacter.set("selectedRace", this.raceStore.get(value));
                 var r = currentCharacter.selectedRace;
-                this._setupattributeBox(this.attributeBonus1, r.attributeBonuses[0], true);
-                this._setupattributeBox(this.attributeBonus2, r.attributeBonuses[1], true);
-                this._setupattributeBox(this.attributePenalty, r.attributePenalty, false);
-                this.size.innerHTML = string.substitute("[${0}] size", [r.size]);
+                this._setupAttributeBox(this.attributeBonus1, r.attributeBonuses[0], true);
+                this._setupAttributeBox(this.attributeBonus2, r.attributeBonuses[1], true);
+                this._setupAttributeBox(this.attributePenalty, r.attributePenalty, false);
+                this._setupSizeBox(this.size, r.size);
+                
                 this.type.innerHTML = string.substitute("[${0}] type", [r.type]);
                 this._setupBonusBox(this.raceBonus1, r.bonuses[0]);
                 this._setupBonusBox(this.raceBonus2, r.bonuses[1]);
@@ -57,7 +58,7 @@ define([
                     domClass.add(this.racialTrack, "hidden");
                 }
             },
-            _setupattributeBox: function (panel, data, isBonus) {
+            _setupAttributeBox: function (panel, data, isBonus) {
                 panel.destroyDescendants(false);
                 domConstruct.empty(panel.domNode);
                 if (data == "") {
@@ -78,6 +79,27 @@ define([
                     currentCharacter.set("raceAttributeOverride", { attr: select.getValue(), value: isBonus ? 2 : -2 });
                 } else {
                     panel.domNode.innerHTML = string.substitute("${0}2<br/>${1}", [isBonus ? "+" : "-", data]);
+                }
+            },
+            _setupSizeBox: function (panel, data) {
+                panel.destroyDescendants(false);
+                domConstruct.empty(panel.domNode);
+
+                if (Array.isArray(data)) {
+                    var options = [];
+                    for (var i = 0; i < data.length; i++) {
+                        options.push({ value: data[i], label: "[" + data[i] + "]" });
+                    }
+                    var select = new Select({ options: options });
+                    select.on("change", function (value) {
+                        currentCharacter.set("size", value);
+                    });
+                    select.placeAt(panel.domNode);
+                    select.startup();
+                    domConstruct.create("span", { innerHTML: " size" }, panel.domNode)
+                }
+                else {
+                    this.size.domNode.innerHTML = string.substitute("[${0}] size", [data]);
                 }
             },
             _setupBonusBox: function (td, data) {
