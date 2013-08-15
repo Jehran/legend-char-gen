@@ -36,7 +36,7 @@ define([
                     var attr = attributes[i];
                     var raceMod = currentCharacter.getRaceMod(attr);
                     this[attr + "Race"].innerHTML = raceMod == 0 ? "" : (raceMod > 0 ? ("+" + raceMod) : raceMod);
-                    this[attr + "Total"].innerHTML = this.get(attr);
+                    this[attr + "Total"].innerHTML = currentCharacter.get(attr);
                     var row = this[attr + "Row"];
                     domClass.remove(row);
                     var kamCell = this[attr + "KAM"];
