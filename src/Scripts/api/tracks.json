@@ -125,7 +125,7 @@
 		]
 	},
 	{	
-		"name": "Dance of the Sun and Moon",
+		"name": "Discipline of the Dragon",
 		"type": "monk",
 		"circles": [
 			{ 
@@ -152,7 +152,7 @@
 		]
 	},
 	{	
-		"name": "Judgment",
+		"name": "Judgement",
 		"cantMulticlass": true,
 		"type": "paladin",
 		"circles": [
@@ -201,7 +201,7 @@
 			{ "name": "Escalation", "text": "Whenever your Struggle ability activates, you may inflict the [Battered] condition for one [Round] on the opponent you hit to activate Struggle. The duration of this condition increases by one [Round] for every time you hit the opponent again. Additionally, once per [Round], if you hit a [Battered] opponent with an attack, that opponent becomes [Dazed] for one [Round]. A successful Fortitude save (DC 10 + ½ your level + your Charisma modifier) negates the [Dazed] condition." },
 			{ "name": "Annihilation", "text": "When you Charge, your attacks gain a bonus to damage equal to your Charisma modifier for the duration of the [Encounter]. This ability stacks with itself up to two times." },
 			{ "name": "Scorched Earth", "text": "If you are reduced to less than half of your normal maximum HP, your attacks gain a bonus to damage equal to your Charisma modifier for the duration of the [Encounter] or until you are healed above that threshold." },
-			{ "name": "sWar Engine", "text": "Whenever you hit an opponent with an attack, that opponent becomes [Battered] and suffers a penalty to its AC equal to your Charisma modifier until the end of the [Encounter]." }
+			{ "name": "War Engine", "text": "Whenever you hit an opponent with an attack, that opponent becomes [Battered] and suffers a penalty to its AC equal to your Charisma modifier until the end of the [Encounter]." }
 		]
 	},
 	{	
@@ -468,7 +468,7 @@
 		]
 	},
 	{	
-		"name": "Force Of Will",
+		"name": "Force of Will",
 		"type": "sage",
 		"circles": [
 			{ "name": "Healing Burst", "text": "By focusing for a moment on the mechanisms of creation, you can force a bit of life back into the world. As a move action, you may create a 15 ft radius spread originating from you, healing 1 HP per character level plus your Key Defensive Modifier to all allies within the spread. This is not a [Positive] or [Negative] effect and can only be used once per [Round]." },

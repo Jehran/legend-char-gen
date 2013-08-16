@@ -51,7 +51,7 @@
 	    "ab": "High",
 	    "goodSaves": ["Fort", "Ref"],
 	    "poorSave": "Will",
-	    "fastTrack": ["Battles Tempering"],
+	    "fastTrack": ["Battle's Tempering"],
 	    "mediumTrack": ["Professional Soldier"],
 	    "slowTrack": ["A Reign of Arrows", "Iron Magi"]
 	},
