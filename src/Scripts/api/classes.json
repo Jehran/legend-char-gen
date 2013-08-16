@@ -107,7 +107,7 @@
 	    "ab": "Low",
 	    "goodSaves": ["Fort", "Will"],
 	    "poorSave": "Ref",
-	    "fastTrack": ["Spellcasting"],
+	    "fastTrack": ["Shaman Spellcasting"],
 	    "mediumTrack": ["Incantation"],
 	    "slowTrack": "Any"
 	},
@@ -121,7 +121,7 @@
 	    "ab": "Low",
 	    "goodSaves": ["Ref", "Will"],
 	    "poorSave": "Fort",
-	    "fastTrack": ["Spellcasting"],
+	    "fastTrack": ["Tactician Spellcasting"],
 	    "mediumTrack": ["Tactical Insight"],
 	    "slowTrack": ["Bag of Tricks"]
 	}
