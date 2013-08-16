@@ -91,12 +91,23 @@ define([
                     return;
                 }
                 var circle = track.circles[circleNum - 1];
+                var text = circle.text;
+
+                if (circle.options) {
+                    for (var i = 0; i < circle.options.length; i++) {
+                        text += string.substitute("<br/><span class='title'>&nbsp;&nbsp;&nbsp;&raquo;&nbsp;${name}</span>&ndash;${text}", circle.options[i]);
+                    }
+                }
 
                 this.circleName.innerHTML = circle.name;
-                this.circleText.innerHTML = circle.text;
+                this.circleText.innerHTML = text;
 
                 if (circle.choice) {
                     domClass.remove(this.circleChoice, "hidden");
+                    if (circle.choice)
+                        domClass.remove(this.circleChoiceMessage, "hidden");
+                    else
+                        domClass.add(this.circleChoiceMessage, "hidden");
                     var data = [];
                     var selectedChoice = currentCharacter.getCircleChoice(circle.name);
                     var selectedId = 1;

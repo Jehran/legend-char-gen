@@ -495,7 +495,7 @@
 			},	
 			{ 
 				"name": "Dweomertide", 
-				"text": "",
+				"text": "You gain access to two Arcane Secrets, Spellbreaker and Reweave.",
 				"options": [
 					{ "name": "Spellbreaker", "text": "As a standard action, you may end a single target effect created by a spell or spell-like ability of a circle lower than your highest Arcane Secrets circle that has a duration and that originates from a creature or square within [Medium] range or targeted a creature within [Medium] range. This is a [Dispelling] effect." },
 					{ "name": "Reweave", "text": "As a standard action, you may restore one effect ended by a [Dispelling] effect in the last two [Rounds] that affected a creature or object within [Medium] range." }
@@ -503,7 +503,7 @@
 			},	
 			{ 
 				"name": "Space, Twisted", 
-				"text": "",
+				"text": "You gain access to the following Arcane Secrets:",
 				"options": [
 					{ "name": "Revelation", "text": "As a standard action, you may create a spread with a radius of 5 ft per circle of this track you possess originating from target square within [Close] range. This spread lasts for 2 [Rounds]. While they are within the spread, creatures are [Revealed], and if they are [Invisible], they are treated as not being [Invisible]. This is a Divination effect." },
 					{ "name": "Dark Tendrils", "text": "As a standard action, you may use wall of thorns, as the spell." }
