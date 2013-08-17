@@ -1,13 +1,11 @@
 ﻿define([
     "dojo/store/Memory",
-    "dojo/json",
-    "dojo/text!api/tracks.json"
+    "api/tracks"
 ], function (
     Memory,
-    json,
     list
     ) {
-    var store = new Memory({ data: json.parse(list), idProperty: "name" });
+    var store = new Memory({ data: list, idProperty: "name" });
     return {
         getTrack: function (track) {
             return store.get(track) || track;

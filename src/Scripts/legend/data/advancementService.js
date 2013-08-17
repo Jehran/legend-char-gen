@@ -1,15 +1,11 @@
 ﻿define([
-    "dojo/json",
-    "dojo/text!api/ab.json",
-    "dojo/text!api/saves.json"
+    "api/ab",
+    "api/saves"
 ], function (
-    json,
-    abJson,
-    savesJson
+    ab,
+    saves
     ) {
         
-    var ab = json.parse(abJson);
-    var saves = json.parse(savesJson);
     return {
         getAb: function (type, level) {
             return ab[type][level - 1];
