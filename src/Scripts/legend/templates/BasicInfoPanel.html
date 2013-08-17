@@ -1,0 +1,18 @@
+<div>
+    <table class="basicInfo">
+        <tr>
+            <th>Player Name:</th>
+            <td><input data-dojo-type="dijit.form.TextBox" data-dojo-attach-point="playerTextBox" data-dojo-attach-event="onChange: _onPlayerNameChange" /></td>
+        </tr>
+        <tr>
+            <th>Character Name:</th>
+            <td><input data-dojo-type="dijit.form.TextBox" data-dojo-attach-point="characterTextBox"  data-dojo-attach-event="onChange: _onCharacterNameChange" /></td>
+        </tr>
+        <tr>
+            <th>Level:</th>
+            <td>
+                <input data-dojo-type="dijit.form.NumberSpinner" value="1" data-dojo-attach-point="levelTextBox" data-dojo-attach-event="onChange: _onLevelChange" data-dojo-props="smallDelta:1, constraints:{min:1,max:20,places:0}"></input>
+            </td>
+        </tr>
+    </table>
+</div>

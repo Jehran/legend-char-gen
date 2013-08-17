@@ -1,5 +1,9 @@
 ﻿define(["dojo/_base/declare", "dojo/Stateful"], function (declare, Stateful) {
     var _CurrentCharacter = declare([Stateful], {
+        //Basic Info
+        playerName: "",
+        characterName: "",
+        level: 1,
         //Race Options
         selectedRace: undefined,
         _selectedRaceSetter: function (value) {
