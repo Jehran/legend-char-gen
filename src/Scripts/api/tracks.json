@@ -628,5 +628,219 @@
             },
             { "name": "Divine Mercy", "text": "Once per [Encounter], when you activate Divine Radiance as a swift action, you call down a shield of blistering light which grants a single ally within [Long] range [Immunity] to damage for a single [Round]." }
         ]
-    }
+    },
+	{	
+		"name": "Demon",
+		"type": "racial",
+		"circles": [
+			{ "name": "Demonic Traits", "text": "Select one Interaction skill (Bluff, Diplomacy, Intimidate, or Perception). You gain a +3 bonus on all checks with that skill. A demon also has the following natural weapon:", "options": [{ "name": "Demon Claws", "text": "Melee, range [Melee], [Brutal 2], [Devastating]." }] },
+			{ "name": "Demon Magic", "text": "Once per [Encounter], as a standard action, you may use either darkness or see invisibility, as the spells." },
+			{ 
+				"name": "Abominable Essence", 
+				"text": "",
+				"choice": [
+					{ "name": "Fell Flight", "text": "You gain wings and the Fly movement mode." },
+					{ "name": "Apocalyptic Visions", "text": "Brief glimpses into the future offer you keen insights into battle. Once per [Round], as a swift action, you may gain a +3 bonus to attack rolls or to Armor Class for one [Round]. " }
+				]
+			},
+			{ "name": "Thick Skinned", "text": "You gain a +1 item bonus to your Armor Class for every circle of Demon that you possess, and [Lesser resistance] to physical damage." },
+			{ 
+				"name": "Vessel of Entropy:", 
+				"text": "",
+				"choice": [
+					{ "name": "Shield of Chaos", "text": "You gain a 20% [Miss chance], and your [Lesser resistance] to physical damage improves to [Resistance] to physical damage." },
+					{ "name": "Chaos Hammer", "text": "Twice per [Encounter], as a standard action, you may deal 1d8 damage per level and inflict [Energy drained] to all opponents within [Close] range. A successful Fortitude save (DC 10 + ½ your level + your Key Offensive Modifier) halves the damage and negates the [Energy drained] condition." }
+				]
+			},
+			{ 
+				"name": "Cruel Reality", 
+				"text": "",
+				"choice": [
+					{ "name": "Bonded by Blood", "text": "You gain the ability to sense how close to death creatures are. You know the maximum and current HP of every creature within [Medium] range to which you have line of sight. In addition, as a swift action, you can form a horrifying bond with a creature within [Medium] range that splits all damage you take equally with that creature until the end of the [Encounter]. (You can damage yourself to damage the bonded creature.) [Damage reduction] and [Resistance] do not apply to damage that creature takes from this ability. As a move action, that creature may make a Fortitude save (DC 10 + ½ your level + your Key Offensive Modifier) to sever this bond. You may only have one such bond at a time." },
+					{ "name": "Aura of Insanity", "text": "Once per [Round], as a free action, you may create spread with a radius of your [Close] range originating from you, which renders all opponents within the area [Confused] for one [Round]. A successful Will save (DC 10 + ½ your level + your KOM) negates the [Confused] condition. Each opponent may only be affected by this ability once per [Encounter]." }
+				]
+			},
+			{ "name": "Aura of Death", "text": "Everything around you seems to die faster than it otherwise should. At the start of each of your turns, all opponents in [Medium] range gain the [Bleeding] condition, all opponents in [Close] range gain the [Battered] condition for one [Round], and whenever you hit an opponent with an attack in [Melee] range, that attack deals additional damage equal to twice your Key Offensive Modifier. A successful Fortitude save (DC 10 + ½ your level + your KOM) negates the [Battered] condition. (These effects are cumulative. For instance, a creature in your [Melee] range suffers all three effects.)" }
+		]
+	},
+	{	
+		"name": "Dragon",
+		"type": "racial",
+		"circles": [
+			{ "name": "Agility", "text": "You gain the Fly movement mode. You also gain the following natural weapon:", "options": [{ "name": "Dragon Claws", "text": "Melee, range [Melee], [Brutal 3]." }] },
+			{ "name": "Vitality", "text": "Your maximum HP increases by one point per character level per circle of the Dragon track you possess, to a maximum of +140 HP at 20th level." },
+			{ "name": "True Dragon", "text": "This marks your transition from your previous form to the dragon you were meant to be. Your scales have hardened into a suit of natural armor, which can be improved with enchantments (see Chapter XIII) as if it were a normal suit of armor. This armor grants you a bonus to AC that is both item and deflection (and thus stacks with neither item not deflection bonuses), equal to your circles in the Dragon track, which improves by +1 if it is enchanted as a Greater Item or Relic, or +2 if it is enchanted as an Artifact. The Masterwork enchantment can never be applied to your scales. In addition, whenever you hit with an attack using your Dragon Claws, you are healed for half the damage you dealt on that attack, up to your level in HP." },
+			{ "name": "Dignity", "text": "All conditions and [Binding] effects affecting you have their durations reduced by one [Round], to a minimum of 1 [Round]. If a condition would normally persist for an [Encounter], it instead lasts eight [Rounds] or until the [Encounter] ends, whichever occurs first. If a condition would normally persist for a [Scene], it instead lasts for the [Encounter]. If a condition would normally persist for a [Quest], it instead lasts for the [Scene]. Permanent conditions are unaltered." },
+			{ "name": "Endurance", "text": "Fatal damage you are subjected to takes a full [Round] to kill or incapacitate you. During that [Round], you may be healed." },
+			{ "name": "Power", "text": "Twice per [Encounter], as a swift action, you may let loose a horrible challenge. Opponents within [Close] range are [Deafened] for one [Round], and they must use their standard and move actions to either flee or approach you (using standard actions to Run and move actions to move away), or target you with offensive actions for one [Round]. A successful Will save (DC 10 + ½ your level + your KOM) negates this effect." },
+			{ "name": "Great Wyrm", "text": "You have grown in power, transcending the mortality of lesser beings. Once per [Scene], whenever you die or are rendered [Unconscious], you are revived at the beginning of the next [Round] with full HP. You can delay your revival or choose not to return at all. If you die more than once during a [Scene], you may come back to life at the beginning of the next [Quest]." }
+		]
+	},
+	{	
+		"name": "Sentient Construct",
+		"type": "racial",
+		"circles": [
+			{ 
+				"name": "Sturdy Frame", 
+				"text": "",
+				"choice": [
+					{ "name": "Hard to Break", "text": "Once per [Encounter], if you make a successful Fortitude or Will save against an effect that would normally have a lesser effect on a successful save (such as a spell with a save of “Fortitude half ”), you instead ignore the effect entirely." },
+					{ "name": "Harder, Better, Faster, Stronger", "text": "You gain a +1 bonus to all damage for every circle of this track that you possess, and a 5 ft. bonus to your movement speed for every even circle of this track that you possess. You also gain a +2 bonus to saves against combat maneuvers." }
+				]
+			},	
+			{ 
+				"name": "Built to Last", 
+				"text": "",
+				"choice": [
+					{ "name": "Nanites", "text": "You gain [Fast healing] equal to your Key Defensive Modifier." },
+					{ "name": "Heavy Metal", "text": "As a standard action, you deal damage equal to your character level + your Key Offensive Modifier to every opponent in [Melee] range. Opponent dealt damage by this ability are [Knocked down]. A successful Reflex save (DC 10 + ½ your level + your Key Offensive Modifier) negates being [Knocked down]." }
+				]
+			},	
+			{ 
+				"name": "Onboard Radar", 
+				"text": "",
+				"choice": [
+					{ "name": "Sensor Suite", "text": "Your advanced senses enable you to penetrate illusions that would fool organic creatures. You gain [Immunity] to effects with the [Figment] descriptor. You also gain [Tremorsense] out to [Close] range and [Blindsight] out to [Melee] range." },
+					{ "name": "Targeting System", "text": "You gain [Tremorsense] out to [Close] range. Whenever you use [Tremorsense] to image the area (see Chapter IX), you gain a +2 bonus to attack rolls against any opponent within your [Tremorsense] that [Round], and whenever you deal damage with an attack to an opponent within your [Tremorsense] that [Round], you deal 1d4 additional damage with the [Precision] descriptor per circle of Sentient Construct." }
+				]
+			},	
+			{ 
+				"name": "Auxiliary Systems", 
+				"text": "",
+				"choice": [
+					{ "name": "Precise Logic", "text": "You gain [Immunity] to effects with the [Mind-affecting] descriptor." },
+					{ "name": "Suppressive Fire", "text": "As a move action, you may create a line with a length of your [Medium] range originating from you that deals 2d4 times your Key Offensive Modifier damage to creatures within the area and knocks them [Prone]. A successful Reflex save (DC 10 + ½ your level + your KOM) negates the [Prone] condition." }
+				]
+			},	
+			{ 
+				"name": "Defensive Matrix", 
+				"text": "",
+				"choice": [
+					{ "name": "Spell Disruption", "text": "You gain [Resistance] to energy and magic damage." },
+					{ "name": "Active Stabilizer", "text": "You gain [Resistance] to physical damage." }
+				]
+			},	
+			{ 
+				"name": "Upgraded Chassis", 
+				"text": "",
+				"choice": [
+					{ "name": "Iron Constitution", "text": "You gain [Immunity] to the [Bleeding], [Sickened], and [Nauseated] conditions." },
+					{ "name": "Charged Attack", "text": "Once per [Round], as a swift action, you may charge up energy. Whenever you do so, you gain a bonus to damage you deal with attacks or offensive actions equal to your KOM for one [Round]. All damage you deal with attacks or offensive actions during that [Round] also ignores 1 point of [Damage reduction] and [Resistance] per 2 levels you possess, and may inflict the [Burning] and [Bleeding] conditions at your choice." }
+				]
+			},	
+			{ 
+				"name": "State of the Art", 
+				"text": "",
+				"choice": [
+					{ "name": "Kinetic Bombardment", "text": "As a standard action, you may pick one square within [Medium] range. You deal 15d6 damage to all creatures within your [Close] range from that square. Those creatures lose [Flying] and the the Fly movement mode for two [Rounds]. In addition, creatures dealt damage by this ability are [Blown away] in a direction of your choice. A successful Fortitude save (DC 10 + ½ your level + your Key Offensive Modifier) negates being [Blown away]." },
+					{ "name": "Big Finish", "text": "Three times per [Encounter], as a move action, the next time you hit an opponent with an attack, that attack deals 4 additional fury damage per level and inflicts the [Battered] condition until the end of the [Encounter], and the [Slowed] condition for two [Rounds]. A successful Fortitude save (DC 10 + ½ your level + your Key Offensive Modifier) halves the additional damage and negates the [Slowed] condition. This is a [Death] effect." }
+				]
+			}
+		]
+	},
+	{	
+		"name": "Undead (Ghoul)",
+		"type": "racial",
+		"circles": [
+			{ "name": "Horrible Bite", "text": "You draw strength from the flesh of sentient creatures. Once per [Round], when you hit an opponent with your Ghoul Bite natural weapon, you may cause that opponent to become [Sickened] for one [Round] and heal yourself 1 hit point per level. A successful Fortitude save (DC 10 + 1/2 your level + your KOM) negates the [Sickened] condition and the healing. You also gain the Ghoul Bite natural weapon", "options": [{ "name": "Ghoul Bite", "text": "Melee, range [Melee], [Brutal 3]" }] },
+			{ "name": "Unholy Regeneration", "text": "You gain [Fast healing] equal to your Key Defensive Modifier." },
+			{ "name": "The Flesh is Strong", "text": "You gain [Immunity] to [Fear], [Bleeding], and the in-combat use of Intimidate." },
+			{ "name": "Infected Bite", "text": "Whenever you hit an opponent with an attack using your Ghoul Bite natural weapon, that opponent gains [Vulnerability] to physical damage for 1 [Round]." },
+			{ "name": "Necrotic Aura", "text": "Each opponent takes a penalty to all d20 rolls based on how close it is to you: a -3 penalty within your [Melee] range, a -2 penalty within your [Close] range, and a -1 penalty within your [Medium] range. These penalties do not stack and expire as soon as the opponent leaves the area of effect." },
+			{ "name": "Heartstopper", "text": "You radiate an aura of decay.Any effect that would heal an opponent within [Medium] range heals 2 fewer points per level, to a minimum of 1 hit point healed." },
+			{ "name": "No Requiem", "text": "Heroes who manage to strike you down are doomed to frustration. Once per [Scene], if you are killed or rendered [Unconscious], you return to undeath after 1 [Round] with full hit points. You may delay your revival or choose not to return at all." }
+		]
+	},
+	{	
+		"name": "Undead (Lich)",
+		"type": "racial",
+		"circles": [
+			{ "name": "Undying Magecraft", "text": "You draw strength from ambient magical energy. Whenever you cast a spell or spell-like ability, or an effect created by a spell or spell-like ability is ended by a [Dispelling] effect within [Close] range, you heal 1 hit point per 2 character levels, minimum 1. At will, as a standard action, you may also use magic missile, as the spell, as a spell-like ability." },
+			{ "name": "Sorcerous Endurance", "text": "Choose either [Cold] or [Electricity]. You gain [Resistance] to the chosen element. At 6th circle, this improves to [Resistance] to energy damage." },
+			{ "name": "The Flesh is Strong", "text": "You gain [Immunity] to [Fear], [Bleeding], and the in-combat use of Intimidate." },
+			{ "name": "Hellfire Empowerment", "text": "You gain a +2 bonus to the DCs of spells, spell-like abilities, and supernatural abilities you possess that have one or more targets, and may use those spells or abilities as if their range categories were one higher, to a maximum of [Extreme] range. Whenever an opponent is hit by one of your spells, spell-like abilities, or supernatural abilities or fails a save against one, you may cause that opponent to become [Burning]." },
+			{ "name": "Necrotic Aura", "text": "Each opponent takes a penalty to all d20 rolls based on how close it is to you: a -3 penalty within your [Melee] range, a -2 penalty within your [Close] range, and a -1 penalty within your [Medium] range. These penalties do not stack and expire as soon as the opponent leaves the area of effect." },
+			{ "name": "Arcane Insight", "text": "Once per [Encounter], as a swift action, you may use greater dispel magic, as the spell." },
+			{ "name": "No Requiem", "text": "Heroes who manage to strike you down are doomed to frustration. Once per [Scene], if you are killed or rendered [Unconscious], you return to undeath after 1 [Round] with full hit points. You may delay your revival or choose not to return at all." }
+		]
+	},
+	{	
+		"name": "Undead (Mummy)",
+		"type": "racial",
+		"circles": [
+			{ "name": "Growing Horror", "text": "You draw strength from the fear of surrounding mortals. Every time an opponent within [Close] range fails a saving throw against a [Fear] effect, you regain 1 hit point per level. The first opponent you hit each [Round] must make a Will save (DC 10 +½ your level + your Key Offensive Modifier) or become [Shaken] for one [Round]." },
+			{ "name": "Well Embalmed", "text": "You now feed on courage as well as fear. You gain [Lesser resistance] to physical damage. Whenever a creature other than yourself within [Close] range ignores a [Fear] effect due to an [Immunity] to [Fear], you regain 1 hit point per 2 levels you possess." },
+			{ "name": "The Flesh is Strong", "text": "You gain [Immunity] to [Fear], [Bleeding], and the in-combat use of Intimidate." },
+			{ "name": "Fear Aura", "text": "The first time each opponent enters your [Melee] range in an [Encounter], you may choose to give that opponent a terrifying gaze that causes that opponent to become [Shaken]. A successful Will save (DC 10 + ½ your level + your Key Offensive Modifier) negates the [Shaken] condition." },
+			{ "name": "Necrotic Aura", "text": "Each opponent takes a penalty to all d20 rolls based on how close it is to you: a -3 penalty within your [Melee] range, a -2 penalty within your [Close] range, and a -1 penalty within your [Medium] range. These penalties do not stack and expire as soon as the opponent leaves the area of effect." },
+			{ "name": "Contagious Touch", "text": "As a standard action, you may make a single attack. On a hit, you deal damage as normal and inflict a -3 penalty to attack rolls and a -5 penalty to damage until the end of the [Encounter]. A successful Fortitude save (DC 10 + ½ your level + your Key Offensive Modifier) negates these penalties. Additionally, once per [Round], as a swift action, you may inflict a -3 penalty to attack rolls and a -5 penalty to damage until the end of the [Encounter] on any creature within 5 ft + 5 ft per 5 levels you possess of a creature already penalized by Contagious Touch. A successful Fortitude save (DC 10 + ½ your level + your Key Offensive modifier) negates these penalties." },
+			{ "name": "No Requiem", "text": "Heroes who manage to strike you down are doomed to frustration. Once per [Scene], if you are killed or rendered [Unconscious], you return to undeath after 1 [Round] with full hit points. You may delay your revival or choose not to return at all." }
+		]
+	},
+	{	
+		"name": "Undead (Vampire)",
+		"type": "racial",
+		"circles": [
+			{ "name": "Bloodlust", "text": "You draw strength from feeding on blood. Whenever you deal damage with your Vampire Bite natural weapon, you heal half the damage dealt, to a maximum of your Key Offensive Modifier. You gain the Vampire Bite natural weapon:", "options": [{ "name": "Vampire Bite", "text": "Melee, range [Melee], [Brutal 2], [Magnum]." }] },
+			{ "name": "Discorporation", "text": "At will, as a swift action, you can turn into a swarm of bats, mist, or similar form to move between opponents and around obstacles (and even through cracks in walls) with ease. For one [Round], you do not provoke attacks of opportunity while moving and gain the Fly movement mode. You may enter occupied squares, but if you end your movement in an occupied square, you are shunted to the last unoccupied square you entered." },
+			{ "name": "The Flesh is Strong", "text": "You gain [Immunity] to [Fear], [Bleeding], and the in-combat use of Intimidate." },
+			{ "name": "Entrancing Gaze", "text": "Once per [Encounter], as a standard action, you may gain the effects of a sanctuaryspell with a DC of 10 + ½ your level + your Key Offensive Modifier and cause all opponents within [Close] range to become [Confused] for three [Rounds]. A successful Will save (DC 10 + ½ your level + your Key Offensive Modifier) negates the [Confused] condition." },
+			{ "name": "Necrotic Aura", "text": "Each opponent takes a penalty to all d20 rolls based on how close it is to you: a -3 penalty within your [Melee] range, a -2 penalty within your [Close] range, and a -1 penalty within your [Medium] range. These penalties do not stack and expire as soon as the opponent leaves the area of effect." },
+			{ "name": "Child of Shadows", "text": "You gain [Fast healing] equal to your character level. In addition, you may now use your Discorporation ability as a free action. Whenever you use Discorporation, for one [Round], whenever you move, you may make any opponent within [Melee] range of your movement path [Shaken] for the rest of the [Encounter]. A successful Will save (DC 10 + ½ your level + your Key Offensive Modifier) negates the [Shaken] condition. You may only make each opponent [Shaken] with this ability once per [Encounter]." },
+			{ "name": "No Requiem", "text": "Heroes who manage to strike you down are doomed to frustration. Once per [Scene], if you are killed or rendered [Unconscious], you return to undeath after 1 [Round] with full hit points. You may delay your revival or choose not to return at all." }
+		]
+	},
+	{	
+		"name": "Undead (Skeleton Champion)",
+		"type": "racial",
+		"circles": [
+			{ "name": "Devastating Strike", "text": "At the beginning of an [Encounter], you gain a focus point. Once per [Round], when an ally in [Close] range activates a spell, spell-like, or supernatural ability, takes an offensive action, or is affected by an offensive action, you gain a focus point. In addition, you may spend 3 focus points during an attack action to make a [Bonus attack] and heal 1 hit point per level." },
+			{ "name": "Rattling Bones", "text": "Once per [Round], as a swift action, as long as you possess at least 1 point of focus, you may gain a +2 bonus to your next attack roll, and deal additional energy damage with the [Acid], [Cold], [Electricity], or [Fire] descriptor equal to your KOM whenever you deal damage with an attack for one [Round]." },
+			{ "name": "The Flesh is Strong", "text": "You gain [Immunity] to [Fear], [Bleeding], and the in-combat use of Intimidate." },
+			{ "name": "Fury of the Dead", "text": "Once per [Round], you may replace one attack from your attack action with the Bull Rush, Disarm, or Trip combat maneuver. The Disarm and Trip combat maneuvers are made with the same attack bonus as the replaced attack." },
+			{ "name": "Necrotic Aura", "text": "Each opponent takes a penalty to all d20 rolls based on how close it is to you: a -3 penalty within your [Melee] range, a -2 penalty within your [Close] range, and a -1 penalty within your [Medium] range. These penalties do not stack and expire as soon as the opponent leaves the area of effect." },
+			{ "name": "Eternal Warrior", "text": "You gain [Lesser resistance] to all damage. Whenever you would be dealt damage, you can spend a focus point to increase your [Lesser resistance] from this ability to [Resistance] against that damage, or two focus points to increase your [Lesser resistance] from this ability to [Greater resistance] against that damage." },
+			{ "name": "No Requiem", "text": "Heroes who manage to strike you down are doomed to frustration. Once per [Scene], if you are killed or rendered [Unconscious], you return to undeath after 1 [Round] with full hit points. You may delay your revival or choose not to return at all." }
+		]
+	},
+	{	
+		"name": "Utter Brute",
+		"type": "racial",
+		"circles": [
+			{ 
+				"name": "Uncivilized", 
+				"text": "You gain a [Melee] natural weapon with the [Brutal 2] and [Reach] properties.",
+				"choice": [
+					{ "name": "Defender", "text": "You gain a bonus that is both fury and item to Armor Class equal to the higher of +2 or the number of circles of Utter Brute you possess." },
+					{ "name": "Attacker", "text": "You gain a bonus that is both fury and item to your attack rolls equal to the number of circles of Utter Brute you possess." }
+				]
+			},	
+			{ "name": "Unforgiving", "text": "The first time you hit with an attack each [Round], after dealing damage, you deal [HP reduction] equal to that amount of damage, up to your character level. In addition, once per [Encounter], as you die, you may take a standard action. You’re still [Dead], so healing won’t help you, and you can’t activate abilities to resurrect yourself if you opt to activate Unforgiving. Triggered abilities with no action cost may be activated instead of the standard action." },
+			{ "name": "Unrelenting", "text": "At the beginning of your turn, you may move 5 ft. At the end of your turn, you may move 5 ft. Effects and conditions other than [Dead] that prevent movement do not prevent this. If you are [Grappled], or [Pinned], this movement causes the creature grappling or pinning you to move 5 ft in the same direction, and does not end the [Grappled] or [Pinned] condition. This movement does not provoke attacks of opportunity." },
+			{ 
+				"name": "Unnatural", 
+				"text": "",
+				"choice": [
+					{ "name": "Soldier", "text": "You gain a +3 bonus to attack rolls and Fortitude saves, a bonus to your maximum hit points equal to +3 per level, and a +10 ft bonus to your movement speed." },
+					{ "name": "Striker", "text": "You gain a +3 bonus to attack rolls and Fortitude saves, a bonus to your maximum hit points equal to +3 per level, and a +5 ft bonus to your [Melee] range." },
+					{ "name": "Skirmisher", "text": "You gain a +1 bonus to attack rolls and Fortitude saves, a bonus to your maximum hit points equal to +1 per level, a +15 ft bonus to your movement speed, and a +5 ft bonus to your [Melee] range." }
+				]
+			},	
+			{ 
+				"name": "Unrelenting", 
+				"text": "",
+				"choice": [
+					{ "name": "Flight & Focus", "text": "You gain the Fly movement mode. & You can eavesdrop on telepathic communication if any participant is within [Close] range." },
+					{ "name": "Flight & Flexibility", "text": "You gain the Fly movement mode. & Your [Melee] range is increased by 10 ft." },
+					{ "name": "Flight & Flesh", "text": "You gain the Fly movement mode. & You gain [Fast healing] equal to your character level." },
+					{ "name": "Focus & Flexibility", "text": "You can eavesdrop on telepathic communication if any participant is within [Close] range. & Your [Melee] range is increased by 10 ft." },
+					{ "name": "Focus & Flesh", "text": "You can eavesdrop on telepathic communication if any participant is within [Close] range. & You gain [Fast healing] equal to your character level." },
+					{ "name": "Flexibility & Flesh", "text": "Your [Melee] range is increased by 10 ft. & You gain [Fast healing] equal to your character level." }
+				]
+			},	
+			{ "name": "Unbreakable", "text": "You gain [Immunity] to two of the following: [Stunned], [Dazed], [Prone], [Slowed], [Fear] effects (this includes [Shaken], [Frightened], [Panicked] and [Cowering])." },
+			{ "name": "Unstoppable", "text": "You gain [Immunity] to [Unconscious] and [Dying], though you still die at -(Constitution) HP. Additionally, every time you hit an opponent with an attack, that opponent is pushed back 5 ft." }
+		]
+	},
+	{}
 ]
