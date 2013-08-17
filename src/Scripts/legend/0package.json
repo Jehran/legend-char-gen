@@ -1,0 +1,25 @@
+﻿{
+	"name": "legend",
+	"version": "1.0",
+	"main": "CharacterBuilder",
+	"directories": {
+		"lib": "."
+	},
+	"dependencies": {
+		"dojo": "1.9.0dev",
+		"dijit": "1.9.0dev",
+		"dojox": "1.9.0dev",
+		"api": "1.0"
+	},
+	"description": "Legend Character Builder",
+	"licenses": [
+		{
+			"type": "unlicense",
+			"url": "http://unlicense.org"
+		}
+	],
+	"bugs": "https://github.com/Jehran/legend-char-gen/issues",
+	"keywords": ["legend", "rpg", "characterbuilder"],
+	"homepage": "https://github.com/Jehran/legend-char-gen",
+	"dojoBuild": "legend.profile.js"
+}

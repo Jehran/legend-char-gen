@@ -12,7 +12,7 @@ define([
     "./data/currentCharacter",
     "./data/trackService",
     "dijit/form/Select",
-    "dojo/store/Memory",
+    "dojo/store/Memory"
 ], function (
 	declare,
 	ContentPane,

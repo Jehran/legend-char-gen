@@ -155,7 +155,7 @@
         },
         _ChaSetter: function (value) {
             this.Cha = value;
-        },
+        }
 
     });
     return new _CurrentCharacter();

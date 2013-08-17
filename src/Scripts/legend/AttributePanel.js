@@ -9,7 +9,7 @@ define([
     "dojo/dom-class",
     "./data/currentCharacter",
     "./form/AttributeSelector",
-    "dijit/form/CheckBox",
+    "dijit/form/CheckBox"
 ], function (
 	declare,
 	ContentPane,

@@ -1,0 +1,1 @@
+node src/scripts/dojo/dojo.js load=build --profile src\scripts\profiles\app.profile.js --releaseDir src\scripts\release

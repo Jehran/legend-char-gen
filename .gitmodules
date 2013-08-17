@@ -7,3 +7,6 @@
 [submodule "src/Scripts/dojox"]
 	path = src/Scripts/dojox
 	url = https://github.com/dojo/dojox.git
+[submodule "src/Scripts/util"]
+	path = src/Scripts/util
+	url = https://github.com/dojo/util.git
