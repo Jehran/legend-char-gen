@@ -61,6 +61,8 @@ define([
                 this.kdm.innerHTML = currentCharacter.getKDM();
                 this.kdmValue.innerHTML = currentCharacter.get("kdm");
                 this.bab.innerHTML = currentCharacter.get("bab");
+
+                this.updateAbilities();
             },
             updateSpecialQualities: function () {
                 this.specialQualities.innerHTML = "TBD";
@@ -72,6 +74,21 @@ define([
                     output.push(s[i] + " +" + currentCharacter.getSkill(s[i]));
                 }
                 this.skills.innerHTML = output.join(", ");
+            },
+            updateAbilities: function () {
+                var circles = currentCharacter.getCircles();
+                var html = "";
+                for (var i = 0; i < circles.length; i++) {
+                    var circle = circles[i];
+                    html += string.substitute("<div><span class='title'>${name}</span>&ndash;${text}", circle);
+                    if (circle.options) {
+                        for (var j = 0; j < circle.options.length; j++) {
+                            html += string.substitute("<br/><span class='title'>&nbsp;&nbsp;&nbsp;&raquo;&nbsp;${name}</span>&ndash;${text}", circle.options[j]);
+                        }
+                    }
+                    html += "</div><br/>";
+                }
+                this.abilities.innerHTML = html;
             }
         });
 })

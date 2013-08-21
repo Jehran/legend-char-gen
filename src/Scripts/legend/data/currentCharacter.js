@@ -2,8 +2,9 @@
     "dojo/_base/declare", 
     "dojo/Stateful", 
     "./advancementService", 
-    "./skillService"],
-    function (declare, Stateful, advancementService, skillService) {
+    "./skillService",
+    "dojo/_base/lang"],
+    function (declare, Stateful, advancementService, skillService, lang) {
     var _CurrentCharacter = declare([Stateful], {
         //Basic Info
         playerName: "",
@@ -123,9 +124,37 @@
         _circleChoices: {},
         addCircleChoice: function (circleName, choiceName) {
             this._circleChoices[circleName] = choiceName;
+            this.set("", "");
         },
         getCircleChoice: function(circleName) {
             return this._circleChoices[circleName];
+        },
+        _getCirclesInTrack: function (type) {
+            var circles = [];
+            var num = advancementService.getNumberOfCircles(type, this.level);
+            var track = this[type + "Track"];
+            for (var i = 0; i < num; i++) {
+                var circle = track.circles[i];
+                if (circle.choice) {
+                    var choice = circle.choice[0];
+                    for (var j = 0; j < circle.choice.length; j++) {
+                        if (circle.choice[j].name == this.getCircleChoice(circle.name)) {
+                            choice = circle.choice[j];
+                            break;
+                        }
+                    }
+                    circle = {
+                        name: circle.name,
+                        text: circle.text,
+                        options: [{ name: choice.name, text: choice.text }]
+                    };
+                }
+                circles.push(circle);
+            }
+            return circles;
+        },
+        getCircles: function () {
+            return this._getCirclesInTrack("fast").concat(this._getCirclesInTrack("medium")).concat(this._getCirclesInTrack("slow"));
         },
         fullBuyInTrack: undefined,
         //Skills

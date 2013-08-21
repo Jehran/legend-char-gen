@@ -1,6 +1,10 @@
 ﻿table {
   border-collapse: collapse;
 }
+h2 {
+  color: #a81d1f;
+  margin: 5px 0;
+}
 table.basicInfo th {
   text-align: right;
 }

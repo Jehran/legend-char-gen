@@ -1,9 +1,11 @@
 ﻿define([
     "api/ab",
-    "api/saves"
+    "api/saves",
+    "api/circles"
 ], function (
     ab,
-    saves
+    saves, 
+    circles
     ) {
         
     return {
@@ -12,6 +14,9 @@
         },
         getSave: function (type, level) {
             return saves[type][level - 1];
+        },
+        getNumberOfCircles: function (type, level) {
+            return circles[type][level - 1];
         }
     };
 });
