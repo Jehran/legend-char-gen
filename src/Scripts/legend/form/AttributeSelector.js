@@ -1,14 +1,27 @@
-﻿define(["dojo/_base/declare", "dijit/form/NumberSpinner"], function (declare, NumberSpinner) {
-    return declare("legend.form.AttributeSelector", [NumberSpinner], {
-        value: 8,
-        smallDelta: 2,
-        intermediateChanges: true,
+﻿define([
+    "dojo/_base/declare",
+    "dijit/form/_FormWidget",
+    "dijit/_WidgetsInTemplateMixin",
+    "dojo/text!./templates/AttributeSelector.html",
+    "dijit/form/NumberTextBox",
+    "dijit/form/HorizontalSlider"], function (declare, _FormWidget, _WidgetsInTemplateMixin, template) {
+        return declare("legend.form.AttributeSelector", [_FormWidget, _WidgetsInTemplateMixin], {
+        templateString: template,
         constructor: function () {
-            this.constraints = { min: 8, max: 18, places: 0 };
+           
         },
-        constraints: { min: 8, max: 18, places: 0 },
         getPointCost: function () {
-            return this.getValue() - 8;
+            return this.numberSpinner.getValue() - 8;
+        },
+        onChange: function (value) {
+            this.slider.set("value", value);
+            
+        },
+        onSliderChange: function (value) {
+            this.numberSpinner.set("value", value);
+        },
+        getValue: function () {
+            return this.numberSpinner.getValue();
         }
     });
 });

@@ -1,20 +1,20 @@
 ﻿define([], function () {
 	return [
-	 { "id": "acrobatics", "name": "Acrobatics", "attribute": "Dex" },
-	 { "id": "athletics", "name": "Athletics", "attribute": "Str" },
-	 { "id": "larceny", "name": "Larceny", "attribute": "Dex" },
-	 { "id": "stealth", "name": "Stealth", "attribute": "Dex" },
-	 { "id": "ride", "name": "Ride", "attribute": "Dex" },
-	 { "id": "vigor", "name": "Vigor", "attribute": "Con" },
-	 { "id": "arcana", "name": "Arcana", "attribute": "Int" },
-	 { "id": "engineering", "name": "Engineering", "attribute": "Int" },
-	 { "id": "geography", "name": "Geography", "attribute": "Int" },
-	 { "id": "history", "name": "History", "attribute": "Int" },
-	 { "id": "medicine", "name": "Medicine", "attribute": "Int" },
-	 { "id": "nature", "name": "Nature", "attribute": "Int" },
-	 { "id": "bluff", "name": "Bluff", "attribute": "Cha" },
-	 { "id": "diplomacy", "name": "Diplomacy", "attribute": "Cha" },
-	 { "id": "intimidate", "name": "Intimidate", "attribute": "Cha" },
-	 { "id": "perception", "name": "Perception", "attribute": "Wis" }
+	 { "name": "Acrobatics", "attribute": "Dex" },
+	 { "name": "Athletics", "attribute": "Str" },
+	 { "name": "Larceny", "attribute": "Dex" },
+	 { "name": "Stealth", "attribute": "Dex" },
+	 { "name": "Ride", "attribute": "Dex" },
+	 { "name": "Vigor", "attribute": "Con" },
+	 { "name": "Arcana", "attribute": "Int" },
+	 { "name": "Engineering", "attribute": "Int" },
+	 { "name": "Geography", "attribute": "Int" },
+	 { "name": "History", "attribute": "Int" },
+	 { "name": "Medicine", "attribute": "Int" },
+	 { "name": "Nature", "attribute": "Int" },
+	 { "name": "Bluff", "attribute": "Cha" },
+	 { "name": "Diplomacy", "attribute": "Cha" },
+	 { "name": "Intimidate", "attribute": "Cha" },
+	 { "name": "Perception", "attribute": "Wis" }
 	];
 });

@@ -33,6 +33,11 @@ define([
                 currentCharacter.watch("slowTrack", lang.hitch(this, this._setupSlowTrack));
                 currentCharacter.watch("fullBuyInTrack", lang.hitch(this, this._setupFullBuyInTrack));
                 currentCharacter.watch("selectedClass", lang.hitch(this, this._classChanged));
+                var this$ = this;
+                currentCharacter.watch("level", function (name, oldValue, newValue) {
+                    domClass.remove(this$.tracks, "level" + oldValue);
+                    domClass.add(this$.tracks, "level" + newValue);
+                });
                 this.recalculate();
             },
             recalculate: function () {

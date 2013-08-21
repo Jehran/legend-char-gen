@@ -8,6 +8,7 @@ define([
     "dojo/string",
     "dojo/_base/lang",
     "dojo/dom-construct",
+    "dojo/dom-class",
     "./data/advancementService",
     "./data/currentCharacter",
     "./data/trackService",
@@ -23,6 +24,7 @@ define([
     string,
     lang,
     domConstruct,
+    domClass,
     advancementService,
     currentCharacter,
     trackService,
@@ -41,6 +43,10 @@ define([
                 var this$ = this;
                 currentCharacter.watch("selectedRace", function () {
                     this$._onClassChange(currentCharacter.selectedClass.id);
+                });
+                currentCharacter.watch("level", function (name, oldValue, newValue) {
+                    domClass.remove(this$.advancement, "level" + oldValue);
+                    domClass.add(this$.advancement, "level" + newValue);
                 });
                 this.fastTrack.on("change", this._onTrackChange);
                 this.mediumTrack.on("change", this._onTrackChange);
@@ -95,6 +101,7 @@ define([
                         [i, advancementService.getAb(c.ab, i), advancementService.getSave("Good", i), advancementService.getSave("Poor", i)]);
                 }
                 this.advancement.innerHTML = table;
+                
             },
             _onTrackChange: function () {
                 currentCharacter.set(this.speed, trackService.getTrack(this.getValue()));

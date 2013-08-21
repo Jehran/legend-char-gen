@@ -33,6 +33,11 @@ define([
                 this.raceStore = raceService.getStore();
                 this.selectRace.setStore(this.raceStore);
                 this._onRaceChange(this.selectRace.getValue());
+                var this$ = this;
+                currentCharacter.watch("level", function (name, oldValue, newValue) {
+                    domClass.remove(this$.advancement, "level" + oldValue);
+                    domClass.add(this$.advancement, "level" + newValue);
+                });
             },
             _onRaceChange: function (value) {
                 currentCharacter.set("selectedRace", this.raceStore.get(value));
@@ -43,8 +48,12 @@ define([
                 this._setupSizeBox(this.size, r.size);
                 
                 this.type.innerHTML = string.substitute("[${0}] type", [r.type]);
-                this._setupBonusBox(this.raceBonus1, r.bonuses[0]);
-                this._setupBonusBox(this.raceBonus2, r.bonuses[1]);
+                var bonuses = [];
+                for (var key in r.bonuses) {
+                    bonuses.push([key, r.bonuses[key]]);
+                }
+                this._setupBonusBox(this.raceBonus1, bonuses[0]);
+                this._setupBonusBox(this.raceBonus2, bonuses[1]);
                 this._setupFeatBox(r.bonusFeats);
                 if (r.racialTrack) {
                     domClass.remove(this.racialTrack, "hidden");

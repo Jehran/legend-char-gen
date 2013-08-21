@@ -1,0 +1,90 @@
+<div>
+    <table class="summaryTable">
+        <tr>
+            <td data-dojo-attach-point="initiative"></td>
+            <td><span data-dojo-attach-point="speed"></span> ft</td>
+            <td data-dojo-attach-point="size"></td>
+        </tr>
+        <tr>
+            <td>INIT</td>
+            <td>SPEED</td>
+            <td data-dojo-attach-point="type"></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                Combat Maneuver DC <span data-dojo-attach-point="combatManeuverDC"></span>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table class="summaryTable defense">
+        <tr>
+            <td data-dojo-attach-point="hp"></td>
+            <td data-dojo-attach-point="ac"></td>
+            <td>
+                Fort <span data-dojo-attach-point="fort"></span>
+            </td>
+            <td>
+                Ref <span data-dojo-attach-point="reflex"></span>
+            </td>
+            <td>
+                Will <span data-dojo-attach-point="will"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>HP</td>
+            <td>AC</td>
+            <td colspan="3">
+                Awareness <span data-dojo-attach-point="awareness"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" data-dojo-attach-point="specialQualities"></td>
+        </tr>
+    </table>
+    <br />
+    <table class="summaryTable offense">
+        <tr>
+            <td colspan="3">Attack Action</td>
+        </tr>
+        <tr>
+            <td data-dojo-attach-point="ab"></td>
+            <td data-dojo-attach-point="damage"></td>
+            <td data-dojo-attach-point="attack" rowspan="2"></td>
+        </tr>
+        <tr>
+            <td>ATK</td>
+            <td>DAMAGE</td>
+        </tr>
+    </table>
+    <br />
+    <div>
+        <span class="title">Abilities:</span> 
+        Str <span data-dojo-attach-point="str"></span> 
+        Dex <span data-dojo-attach-point="dex"></span> 
+        Con <span data-dojo-attach-point="con"></span>
+        Int <span data-dojo-attach-point="int"></span>
+        Wis <span data-dojo-attach-point="wis"></span>
+        Cha <span data-dojo-attach-point="cha"></span>
+    </div>
+    <div>
+        <span class="title">Skills:</span>
+        <span data-dojo-attach-point="skills"></span>
+    </div>
+    <div>
+        <span class="title">Social Defenses:</span>
+        Bluff <span data-dojo-attach-point="bluffDefense"></span>,
+        Diplomancy <span data-dojo-attach-point="diplomacyDefense"></span>,
+        Intimidate <span data-dojo-attach-point="intimidateDefense"></span>,
+        Perception <span data-dojo-attach-point="perceptionDefense"></span>
+    </div>
+    <div>
+        <span class="title">Feats:</span>
+        <span data-dojo-attach-point="feats"></span>
+    </div>
+    <div>
+        <span class="title">KOM:</span> <span data-dojo-attach-point="kom"></span> (+<span data-dojo-attach-point="komValue"></span>)
+        <span class="title">KDM:</span> <span data-dojo-attach-point="kdm"></span> (+<span data-dojo-attach-point="kdmValue"></span>)
+        <span class="title">BAB:</span> +<span data-dojo-attach-point="bab"></span>
+    </div>
+</div>

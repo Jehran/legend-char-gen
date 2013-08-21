@@ -34,7 +34,7 @@ define([
                 for (var i = 0; i < currentCharacter.getNumberOfSkills() ; i++) {
                     var select = new Select({ labelAttr: "name", sortByLabel: false, forceWidth: true });
                     select.setStore(skillStore);
-                    select.set("value", skillStore.data[i].id);
+                    select.set("value", skillStore.data[i].name);
                     select.placeAt(this.domNode);
                     select.startup();
                     select.on("change", lang.hitch(this, this._setSkills));

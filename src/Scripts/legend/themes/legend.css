@@ -74,8 +74,13 @@ table.advancement.fullBuyInDisabled td:nth-last-child(-n+2) {
 table.advancement tr:last-child td {
   border-bottom: none;
 }
-table.attributeSelector .dijitSpinner {
-  width: 45px;
+table.attributeSelector .dijitNumberTextBox {
+  width: 25px;
+  display: inline-block;
+}
+table.attributeSelector .dijitSliderH {
+  display: inline-block;
+  width: 100px;
 }
 table.attributeSelector tr.kom td {
   background: grey;
@@ -97,4 +102,42 @@ table.tracks td.hasChoice {
 }
 .skillPanel .dijitStretch {
   width: 90px;
+}
+table.summaryTable {
+  width: 285px;
+  text-align: center;
+}
+table.summaryTable td {
+  background: #333333;
+  color: white;
+}
+table.summaryTable tr:last-child td {
+  background: black;
+}
+table.summaryTable.offense tr:first-child td {
+  background: #a81d1f;
+}
+table.summaryTable.offense tr:last-child td {
+  background: #333333;
+}
+table.level1 tr:nth-of-type(n+3) td,
+table.level2 tr:nth-of-type(n+4) td,
+table.level3 tr:nth-of-type(n+5) td,
+table.level4 tr:nth-of-type(n+6) td,
+table.level5 tr:nth-of-type(n+7) td,
+table.level6 tr:nth-of-type(n+8) td,
+table.level7 tr:nth-of-type(n+9) td,
+table.level8 tr:nth-of-type(n+10) td,
+table.level9 tr:nth-of-type(n+11) td,
+table.level10 tr:nth-of-type(n+12) td,
+table.level11 tr:nth-of-type(n+13) td,
+table.level12 tr:nth-of-type(n+14) td,
+table.level13 tr:nth-of-type(n+15) td,
+table.level14 tr:nth-of-type(n+16) td,
+table.level15 tr:nth-of-type(n+17) td,
+table.level16 tr:nth-of-type(n+18) td,
+table.level17 tr:nth-of-type(n+19) td,
+table.level18 tr:nth-of-type(n+20) td,
+table.level19 tr:nth-of-type(n+21) td {
+  background: gray;
 }

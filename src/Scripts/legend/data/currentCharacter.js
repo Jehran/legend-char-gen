@@ -1,4 +1,9 @@
-﻿define(["dojo/_base/declare", "dojo/Stateful"], function (declare, Stateful) {
+﻿define([
+    "dojo/_base/declare", 
+    "dojo/Stateful", 
+    "./advancementService", 
+    "./skillService"],
+    function (declare, Stateful, advancementService, skillService) {
     var _CurrentCharacter = declare([Stateful], {
         //Basic Info
         playerName: "",
@@ -32,6 +37,25 @@
                 return -2;
             return 0;
         },
+        _speedGetter: function () {
+            if (this.selectedRace.bonuses.speed)
+                return this.selectedRace.bonuses.speed;
+            
+            switch (this._size) {
+                case "Small":
+                    return 25;
+                case "Average":
+                    return 30;
+                case "Large":
+                case "Huge":
+                    return 35;
+                default:
+                    return 30;
+            }
+        },
+        _typeGetter: function () {
+            return this.selectedRace.type;
+        },
         //Class .
         selectedClass: undefined,
         _selectedClassSetter: function (value) {
@@ -54,6 +78,9 @@
                 return this._komClassOverride;
             return this.selectedClass.kom;
         },
+        _komGetter: function () {
+            return this._getAttributeMod(this.get(this.getKOM()));
+        },
         getKDM: function () {
             if (this._kdmTrackOverride)
                 return this._kdmTrackOverride;
@@ -62,6 +89,9 @@
             if (this._kdmClassOverride)
                 return this._kdmClassOverride;
             return this.selectedClass.kdm;
+        },
+        _kdmGetter: function () {
+            return this._getAttributeMod(this.get(this.getKDM()));
         },
         _checkTrack: function (oldValue, newValue) {
             if (oldValue) {
@@ -107,12 +137,21 @@
         _skills: [],
         _skillsSetter: function (value) { this._skills = value; },
         _skillsGetter: function (value) { return this._skills; },
+        getSkill: function (skill) {
+            var attrBonus = this._getAttributeMod(this._getAttribute(skillService.getAttribute(skill)));
+            if (this.isSkillTrained(skill))
+                return this.level + attrBonus;
+            return attrBonus;
+        },
         isSkillTrained: function (skill) {
             return this._skills.indexOf(skill) >= 0;
         },
         //Character Sheet Info
         _getAttribute: function (attribute) {
             return this[attribute] + this.getRaceMod(attribute)
+        },
+        _getAttributeMod: function(attribute) {
+            return Math.floor((attribute - 10) / 2);
         },
         Str: 8,
         _StrGetter: function () {
@@ -121,12 +160,18 @@
         _StrSetter: function (value) {
             this.Str = value;
         },
+        _StrModGetter: function() {
+            return this._getAttributeMod(this.get("Str"));
+        },
         Con: 8,
         _ConGetter: function () {
             return this._getAttribute("Con");
         },
         _ConSetter: function (value) {
             this.Con = value;
+        },
+        _ConModGetter: function () {
+            return this._getAttributeMod(this.get("Con"));
         },
         Dex: 8,
         _DexGetter: function () {
@@ -135,12 +180,18 @@
         _DexSetter: function (value) {
             this.Dex = value;
         },
+        _DexModGetter: function () {
+            return this._getAttributeMod(this.get("Dex"));
+        },
         Int: 8,
         _IntGetter: function () {
             return this._getAttribute("Int");
         },
         _IntSetter: function (value) {
             this.Int = value;
+        },
+        _IntModGetter: function () {
+            return this._getAttributeMod(this.get("Int"));
         },
         Wis: 8,
         _WisGetter: function () {
@@ -149,12 +200,69 @@
         _WisSetter: function (value) {
             this.Wis = value;
         },
+        _WisModGetter: function () {
+            return this._getAttributeMod(this.get("Wis"));
+        },
         Cha: 8,
         _ChaGetter: function () {
             return this._getAttribute("Cha");
         },
         _ChaSetter: function (value) {
             this.Cha = value;
+        },
+        _ChaModGetter: function () {
+            return this._getAttributeMod(this.get("Cha"));
+        },
+        _initiativeGetter: function () {
+            return this.get("DexMod");
+        },
+        _combatManeuverDCGetter: function () {
+            return Math.floor(10 + this.level / 2 + Math.max(this.get("DexMod"), this.get("StrMod")));
+        },
+        _hpGetter: function () {
+            return (this.get("kdm") + this.selectedClass.hp) * (this.level + 1);
+        },
+        _babGetter: function () {
+            return advancementService.getAb(this.selectedClass.ab, this.level);
+        },
+        _acGetter: function () {
+            return 10 + this.get("kdm") + this.get("bab");
+        },
+        _getBaseSave: function (save) {
+            var type = "Poor";
+            if (this.selectedRace.racialTrack) {
+                if (this.selectedRace.racialTrack.goodSaves.indexOf(save) >= 0)
+                    type = "Good";
+            }
+            else {
+                if (this.selectedClass.goodSaves.indexOf(save) >= 0)
+                    type = "Good";
+            }
+            return advancementService.getSave(type, this.level);
+        },
+        _fortGetter: function () {
+            return this._getBaseSave("Fort") + Math.max(this.get("ConMod"), this.get("StrMod"));
+        },
+        _reflexGetter: function () {
+            return this._getBaseSave("Ref") + Math.max(this.get("IntMod"), this.get("DexMod"));
+        },
+        _willGetter: function () {
+            return this._getBaseSave("Will") + Math.max(this.get("WisMod"), this.get("ChaMod"));
+        },
+        _awarenessGetter: function () {
+            return 10 + this.level + this.get("WisMod");
+        },
+        _bluffDefenseGetter: function () {
+            return 10 + this.level + this.get("WisMod");
+        },
+        _diplomacyDefenseGetter: function () {
+            return 10 + this.level + this.get("IntMod");
+        },
+        _intimidateDefenseGetter: function () {
+            return 10 + this.level + this.get("ChaMod");
+        },
+        _perceptionDefenseGetter: function () {
+            return 10 + this.level + this.get("ChaMod");
         }
 
     });

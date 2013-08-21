@@ -10,7 +10,8 @@ define([
     "./AttributePanel",
     "./TrackPanel",
     "./SkillPanel",
-    "./BasicInfoPanel"
+    "./BasicInfoPanel",
+    "./SummaryPanel"
 ], function (
 	declare,
 	_WidgetBase,
@@ -23,7 +24,8 @@ define([
     AttributePanel,
     TrackPanel,
     SkillPanel,
-    BasicInfoPanel) {
+    BasicInfoPanel,
+    SummaryPanel) {
     return declare('legend.CharacterBuilder', [_WidgetBase, _TemplatedMixin, _WidgetsInTemplateMixin],
         {
             templateString: template
